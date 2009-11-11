@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Пройдите начальный тест</string>
+    <string name="app_name">100 Push Ups</string>
+    <string name="TextView01">Начальный тест</string>
+    <string name="Button01">Вперёд!</string>
+</resources>
