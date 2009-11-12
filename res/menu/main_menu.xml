@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+
+<item android:id="@+id/TrainingMenuItem" android:title="@string/mm_TrainingMenuItem" android:icon="@drawable/mm_flag">
+<menu><item android:id="@+id/NewTrainingMenuItem" android:title="@string/mm_TrainingMenuItem"></item>
+<item android:id="@+id/ContinueTrainingMenuItem" android:title="@string/mm_ContinueTrainingMenuItem"></item>
+
+
+
+<group android:id="@+id/TrainingService"><item android:id="@+id/BackPastWeekMenuItem" android:title="@string/mm_BackPastWeekMenuItem"></item><item android:id="@+id/RepeatCurrentWeekMenuItem" android:title="@string/mm_RepeatCurrentWeekMenuItem"></item><item android:id="@+id/RepeatLastTrainingMenuItem" android:title="@string/mm_RepeatLastTrainingMenuItem"></item></group>
+</menu>
+</item>
+<item android:id="@+id/StatsMenuItem" android:title="@string/mm_StatsMenuItem" android:icon="@drawable/mm_chart"></item>
+</menu>
