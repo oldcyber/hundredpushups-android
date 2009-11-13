@@ -3,16 +3,18 @@
     <string name="hello">Пройдите начальный тест</string>
     <string name="app_name">100 Push Ups</string>
     <string name="TextView01">Начальный тест</string>
-    <string name="Button01">Вперёд!</string>
     <string name="legal">Легально о программе</string>
     <string name="copyright">© 2009 "D-Lab", OldCyber.</string>
     <string name="version">Version</string>
     <string name="build">, build</string>
-<!-- Меню home_menu -->
-    <string name="hm_logout">Выйти из аккаунта</string>
+    <!-- mainbuttons -->
+    <string name="FirstInit">Начать тестирование</string>
+    <string name="GoTraining">Начать тренировку</string>
+    <string name="ChangeTraining">Изменить тренировку</string>
+	<!-- home_menu -->
     <string name="hm_about">О программе</string>
     <string name="hm_exit">Выход</string>
-<!-- Меню main_menu наверно будет убито -->
+	<!-- Меню main_menu наверно будет убито -->
     <string name="mm_TrainingMenuItem">Тренировка</string>
     <string name="mm_StatsMenuItem">Статистика</string>
     <string name="mm_NewTrainigMenuItem">Новая тренировка</string>
@@ -20,4 +22,9 @@
     <string name="mm_RepeatLastTrainingMenuItem">Повторить последнюю</string>
     <string name="mm_BackPastWeekMenuItem">К прошлой неделе</string>
     <string name="mm_RepeatCurrentWeekMenuItem">Повторить неделю</string>
+    <!-- userinfo -->
+    <string name="tv1T1">Вы завершили:</string>
+    <string name="tv1T2">дня</string> 
+    <string name="tv1T3">недели</string>
+    <string name="tv2T1">Ваш уровень:</string>
 </resources>

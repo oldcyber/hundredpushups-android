@@ -13,7 +13,7 @@ import android.widget.TextView;
 public class mWindowAbout {
     public static Dialog makeDialog(Context context) {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View view = inflater.inflate(R.xml.about, null);
+        View view = inflater.inflate(R.layout.about, null);
         AlertDialog dialog = new AlertDialog.Builder(context)
         //		TODO: Придумать иконку для приложения
         //        .setIcon(R.drawable.100pushup_icon)

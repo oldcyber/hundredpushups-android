@@ -3,28 +3,8 @@
 	android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#ffffff">
-
-/<TextView  
-    android:layout_width="fill_parent" 
-    android:layout_height="wrap_content" 
-    android:text="@string/hello"
-    />
-
-<LinearLayout android:id="@+id/LinearLayout01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center">
-<Button 
-android:text="@string/Button01" 
-android:id="@+id/FirstInit" 
-android:layout_width="wrap_content" 
-android:layout_height="wrap_content">
-</Button>
-
-<Button 
-android:text="@string/Button01" 
-android:id="@+id/Button01" 
-android:layout_width="wrap_content" 
-android:layout_height="wrap_content">
-</Button>
-</LinearLayout>
-
+    android:background="#ffffff" 
+    android:gravity="top">
+<include layout="@layout/userinfo" android:id="@+id/UserInfo"/>
+<include layout="@layout/mainbuttons" android:id="@+id/MainButtons"/>
 </LinearLayout>

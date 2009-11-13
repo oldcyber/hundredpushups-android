@@ -16,57 +16,63 @@ public final class R {
         public static final int mm_flag=0x7f020002;
     }
     public static final class id {
-        public static final int AboutMenuItem=0x7f070007;
-        public static final int BackPastWeekMenuItem=0x7f07000d;
-        public static final int Button01=0x7f070002;
-        public static final int ContinueTrainingMenuItem=0x7f07000b;
-        public static final int ExitMenuItem=0x7f070008;
-        public static final int FirstInit=0x7f070001;
-        public static final int LinearLayout01=0x7f070000;
-        public static final int LogoutMenuItem=0x7f070006;
-        public static final int NewTrainingMenuItem=0x7f07000a;
-        public static final int RepeatCurrentWeekMenuItem=0x7f07000e;
-        public static final int RepeatLastTrainingMenuItem=0x7f07000f;
-        public static final int StatsMenuItem=0x7f070010;
-        public static final int TextView01=0x7f070005;
-        public static final int TrainingMenuItem=0x7f070009;
-        public static final int TrainingService=0x7f07000c;
-        public static final int build=0x7f070003;
-        public static final int copyright=0x7f070004;
+        public static final int AboutMenuItem=0x7f070009;
+        public static final int ExitMenuItem=0x7f07000a;
+        public static final int FirstInit=0x7f070005;
+        public static final int GoTraining=0x7f070006;
+        public static final int LinearLayout01=0x7f070007;
+        public static final int MainButtons=0x7f070004;
+        public static final int TextView01=0x7f070002;
+        public static final int TextView02=0x7f070008;
+        public static final int UserInfo=0x7f070003;
+        public static final int build=0x7f070000;
+        public static final int copyright=0x7f070001;
     }
     public static final class layout {
-        public static final int main=0x7f030000;
+        public static final int about=0x7f030000;
+        public static final int firstinit=0x7f030001;
+        public static final int main=0x7f030002;
+        public static final int mainbuttons=0x7f030003;
+        public static final int training=0x7f030004;
+        public static final int userinfo=0x7f030005;
     }
     public static final class menu {
         public static final int home_menu=0x7f060000;
-        public static final int main_menu=0x7f060001;
     }
     public static final class string {
-        public static final int Button01=0x7f050003;
+        public static final int ChangeTraining=0x7f050009;
+        /**  mainbuttons 
+         */
+        public static final int FirstInit=0x7f050007;
+        public static final int GoTraining=0x7f050008;
         public static final int TextView01=0x7f050002;
         public static final int app_name=0x7f050001;
-        public static final int build=0x7f050007;
-        public static final int copyright=0x7f050005;
+        public static final int build=0x7f050006;
+        public static final int copyright=0x7f050004;
         public static final int hello=0x7f050000;
-        public static final int hm_about=0x7f050009;
-        public static final int hm_exit=0x7f05000a;
-        /**  Меню home_menu 
+        /**  home_menu 
          */
-        public static final int hm_logout=0x7f050008;
-        public static final int legal=0x7f050004;
-        public static final int mm_BackPastWeekMenuItem=0x7f050010;
-        public static final int mm_ContinueTrainingMenuItem=0x7f05000e;
-        public static final int mm_NewTrainigMenuItem=0x7f05000d;
-        public static final int mm_RepeatCurrentWeekMenuItem=0x7f050011;
-        public static final int mm_RepeatLastTrainingMenuItem=0x7f05000f;
-        public static final int mm_StatsMenuItem=0x7f05000c;
+        public static final int hm_about=0x7f05000a;
+        public static final int hm_exit=0x7f05000b;
+        public static final int legal=0x7f050003;
+        public static final int mm_BackPastWeekMenuItem=0x7f050011;
+        public static final int mm_ContinueTrainingMenuItem=0x7f05000f;
+        public static final int mm_NewTrainigMenuItem=0x7f05000e;
+        public static final int mm_RepeatCurrentWeekMenuItem=0x7f050012;
+        public static final int mm_RepeatLastTrainingMenuItem=0x7f050010;
+        public static final int mm_StatsMenuItem=0x7f05000d;
         /**  Меню main_menu наверно будет убито 
          */
-        public static final int mm_TrainingMenuItem=0x7f05000b;
-        public static final int version=0x7f050006;
+        public static final int mm_TrainingMenuItem=0x7f05000c;
+        /**  userinfo 
+         */
+        public static final int tv1T1=0x7f050013;
+        public static final int tv1T2=0x7f050014;
+        public static final int tv1T3=0x7f050015;
+        public static final int tv2T1=0x7f050016;
+        public static final int version=0x7f050005;
     }
     public static final class xml {
-        public static final int about=0x7f040000;
-        public static final int frstinit=0x7f040001;
+        public static final int preferences=0x7f040000;
     }
 }
