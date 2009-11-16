@@ -1,6 +1,7 @@
 package ru.d_lab.HundredPushUps;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
@@ -15,29 +16,29 @@ import android.widget.TextView;
 
 
 public class HundredPushUps extends Activity {
-	 //public static final String FIRST_RUN = "1";
-	 //public static final String TRAINING_WEKK = "1";
-	 //public static final String TRAINING_DAY = "1";
+
 	 public static final String MY_SETTINGS ="FileSettings";
 	 
     /** Called when the activity is first created. */
 	private Button mFirstInit;
-	private Button mGoTraining;
+	private Button mGoTraining, mFirstRun;
 	String abc;
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);      
-     // применение настроек
+     
+        // применение настроек
         SharedPreferences settings = getSharedPreferences("FileSettings", 0);
         boolean firstRun = settings.getBoolean("FirstRun", true);
         int trainingWeek = settings.getInt("TrainingWeek", 1);
         int trainingDay = settings.getInt("TrainingDay", 1);
-        if (firstRun = true){
-        	abc = "Џервый запуск";}
+        
+        if (firstRun == true){
+        	abc = "первый запуск";}
         else
-        	{abc = "Џовторный запуск";}
+        	{abc = "повторный запуск";}
         
         // UserInfo welcome text
         int uDay=2; int uWeek=3; int uLevel = 2;
@@ -51,24 +52,54 @@ public class HundredPushUps extends Activity {
             mFirstInit = (Button) findViewById(R.id.FirstInit);
             mFirstInit.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-           	setContentView(R.layout.firstinit);
-            }
-        });
+  			Intent intent = new Intent();
+  			intent.setClass(this, FirstInit.class);
+  			startActivity(intent);
+  			finish();
+            	//           	setContentView(R.layout.firstinit);
+            
+          mFirstRun = (Button) findViewById(R.id.FirstRunAgree);
+          mFirstRun.setOnClickListener(new View.OnClickListener() {
+          	public void onClick(View v) {
+
+          			}
+//          	SharedPreferences settings = getSharedPreferences("FileSettings", 0);
+//            	SharedPreferences.Editor editor = settings.edit();
+//            	editor.putBoolean("FirstRun", false);
+//            	editor.commit();
+//          	setContentView(R.layout.main);
+//          	}
+
+          });
+            }   
+            
+            });
             mGoTraining = (Button) findViewById(R.id.GoTraining);
             mGoTraining.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
             setContentView(R.layout.training);
             }
         });
-    }
+//            mFirstRun = (Button) findViewById(R.id.FirstRunAgree);
+//            mFirstRun.setOnClickListener(new View.OnClickListener() {
+//            	public void onClick(View v) {
+//            	setContentView(R.layout.main);
+//            	}
+//
+//            });
     
-    public void setCurrentStatus(){
-    	SharedPreferences settings = getSharedPreferences("FileSettings", 0);
-    	SharedPreferences.Editor editor = settings.edit();
-    	editor.putBoolean("FirstRun", false);
-    	editor.commit();
-    	
+    
     }
+
+//    @Override
+//    protected void onStop(){
+//       super.onStop();
+//        SharedPreferences settings = getSharedPreferences("FileSettings", 0);
+//    	SharedPreferences.Editor editor = settings.edit();
+//    	editor.putBoolean("FirstRun", true);
+//    	editor.commit();
+//    }
+//    
     //home_menu
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
