@@ -1,8 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  android:layout_width="wrap_content"
-  android:layout_height="wrap_content">
-<TextView android:text="First Init" android:id="@+id/TextView01" android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
-<Button android:text="Подтвердить" android:id="@+id/FirstRunAgree" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+<ScrollView 
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/ScrollView01" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content">
+
+<LinearLayout 
+android:id="@+id/LinearLayout01" 
+android:layout_width="fill_parent" 
+android:orientation="vertical" 
+android:scrollbars="vertical" android:layout_height="fill_parent">
+<TextView 
+android:text="@string/WelcomeFirstInit"
+android:textStyle="bold"
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" 
+android:layout_gravity="fill"/>
+<TextView 
+android:text="@string/WelcomeFirstInit1"
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" 
+android:layout_gravity="fill"/>
+<TextView 
+android:text="@string/WelcomeFirstInit2"
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" 
+android:layout_gravity="fill"/>
+<TextView 
+android:text="@string/WelcomeFirstInit3"
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" 
+android:layout_gravity="fill"/>
+<TextView 
+android:text="@string/WelcomeFirstInit4"
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" 
+android:layout_gravity="fill"/>
+<TextView 
+android:text="@string/WelcomeFirstInit5"
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" 
+android:layout_gravity="fill"/>
+<TextView 
+android:text=" "
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" 
+android:layout_gravity="fill"/>
+<Button 
+android:text="@string/Ok" 
+android:id="@+id/FirstRunOk" 
+android:textStyle="bold"
+android:layout_span="2"
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" 
+android:gravity="center" android:layout_gravity="center"/>
 </LinearLayout>
+</ScrollView>
