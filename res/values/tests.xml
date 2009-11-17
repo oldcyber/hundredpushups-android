@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string-array name="tweeks">
+<item>Первой недели</item>
+<item>Второй недели</item>
+<item>Третьей недели</item>
+<item>Четвёртой недели</item>
+<item>Пятой недели</item>
+<item>Шестой недели</item>
+</string-array>
+<string-array name="tdays">
+<item>Первый день</item>
+<item>Второй день</item>
+<item>Третий день</item>
+</string-array>
+</resources>

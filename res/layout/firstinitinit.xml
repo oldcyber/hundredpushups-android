@@ -24,7 +24,8 @@ android:layout_height="wrap_content" />
 android:singleLine="true"
 android:numeric="integer"
 android:id="@+id/CountPushUps" 
-android:text="0" 
+android:hint="    input push"
+android:text="0"
 android:layout_width="wrap_content" 
 android:layout_height="wrap_content" />
 </TableRow>

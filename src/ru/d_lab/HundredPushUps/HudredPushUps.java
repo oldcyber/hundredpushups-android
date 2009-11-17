@@ -41,7 +41,7 @@ public class HudredPushUps extends Activity implements OnClickListener {
         else
         {
            	Button mFirstInit = (Button)findViewById(R.id.FirstInit);
-        	mFirstInit.setText("Начать тренировку");
+        	mFirstInit.setText("Ќачать тренировку");
         	abc = "повторный запуск";
         	mFirstInit.setOnClickListener(this);
         }
@@ -54,6 +54,7 @@ public class HudredPushUps extends Activity implements OnClickListener {
         
         //init main screen
         TextView tv1 = (TextView) findViewById(R.id.TextView01);
+        //char color = getString(R.tests.tweeks.(1));
         tv1.setText(getString(R.string.tv1T1)+" "+trainingDay+" "+getString(R.string.tv1T2)+" "+trainingWeek+" "+getString(R.string.tv1T3)+" и это "+ abc);        
         TextView tv2 = (TextView) findViewById(R.id.TextView02);
         tv2.setText(getString(R.string.tv2T1)+" "+ trainingLevel);       
