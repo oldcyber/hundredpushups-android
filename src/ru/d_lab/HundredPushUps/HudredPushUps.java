@@ -41,7 +41,7 @@ public class HudredPushUps extends Activity implements OnClickListener {
         else
         {
            	Button mFirstInit = (Button)findViewById(R.id.FirstInit);
-        	mFirstInit.setText("Ќачать тренировку");
+        	mFirstInit.setText("начать тренировку");
         	abc = "повторный запуск";
         	mFirstInit.setOnClickListener(this);
         }

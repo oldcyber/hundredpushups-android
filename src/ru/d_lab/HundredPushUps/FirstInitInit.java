@@ -6,8 +6,10 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 public class FirstInitInit extends Activity implements OnClickListener {
 
@@ -17,6 +19,19 @@ public void onCreate(Bundle savedInstanceState)
 {
 super.onCreate(savedInstanceState);
 setContentView(R.layout.firstinitinit);
+
+//spinner
+Spinner s1 = (Spinner) findViewById(R.id.spinner1);
+Spinner s2 = (Spinner)findViewById(R.id.spinner2);
+ArrayAdapter<?> adapter1 = ArrayAdapter.createFromResource(
+        this, R.array.tweeks, android.R.layout.simple_spinner_item);
+ArrayAdapter<?> adapter2 = ArrayAdapter.createFromResource(
+        this, R.array.tdays, android.R.layout.simple_spinner_item);
+
+//adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+s1.setAdapter(adapter1);
+s2.setAdapter(adapter2);
 
 //Confirm training level
 Button mFirstRunAgree = (Button)findViewById(R.id.FirstRunAgree);
@@ -63,7 +78,8 @@ int presult = 0;
 		else if (result > 64 & result < 99){presult = 6;}
 		else if (result > 99){presult = 7;}	
 		}
-		
+
+    
 		//set config to new parameters
 		SharedPreferences settings = getSharedPreferences("FileSettings", 0);
 	    SharedPreferences.Editor editor = settings.edit();
