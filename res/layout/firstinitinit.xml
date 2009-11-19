@@ -14,13 +14,12 @@ android:orientation="vertical">
 <TableRow android:paddingBottom="5dip">
 <Spinner 
         android:id="@+id/spinner1"
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:drawSelectorOnTop="true"
         android:prompt="@string/planet_prompt1"
     />
-</TableRow>
-<TableRow android:paddingBottom="5dip">    
+ 
 <Spinner 
         android:id="@+id/spinner2"
         android:layout_width="fill_parent"

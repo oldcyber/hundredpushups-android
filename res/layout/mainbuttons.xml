@@ -3,12 +3,13 @@
   xmlns:android="http://schemas.android.com/apk/res/android"
   android:layout_width="fill_parent"
   android:layout_height="wrap_content">
+<!-- 
 <Button 
 android:text="@string/FirstInit" 
 android:id="@+id/FirstInit" 
 android:layout_width="fill_parent" 
 android:layout_height="wrap_content"/>
-<!-- 
+
 <Button 
 android:text="@string/GoTraining" 
 android:id="@+id/GoTraining" 

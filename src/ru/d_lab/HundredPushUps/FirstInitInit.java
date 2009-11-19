@@ -28,7 +28,8 @@ ArrayAdapter<?> adapter1 = ArrayAdapter.createFromResource(
 ArrayAdapter<?> adapter2 = ArrayAdapter.createFromResource(
         this, R.array.tdays, android.R.layout.simple_spinner_item);
 
-//adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
 s1.setAdapter(adapter1);
 s2.setAdapter(adapter2);
