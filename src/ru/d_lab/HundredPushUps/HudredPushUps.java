@@ -3,7 +3,6 @@ package ru.d_lab.HundredPushUps;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -13,8 +12,7 @@ import android.widget.TextView;
 public class HudredPushUps extends Activity implements OnClickListener {
 	
 	public static final String MY_SETTINGS ="FileSettings";
-	String abc;
-	
+	boolean sfirstrun;
 	/** Called when the activity is first created. */
     @Override
     	public void onCreate(Bundle savedInstanceState) 
@@ -29,36 +27,44 @@ public class HudredPushUps extends Activity implements OnClickListener {
         int trainingDay = settings.getInt("TrainingDay", 1);
         int trainingLevel = settings.getInt("TrainingLevel", 0);
         int userAge = settings.getInt("UserAge", 0);
- 
+        
+//        firstRun = true;
         //check applications state and set button text
         if (firstRun == true)
         {
-        	Button mFirstInit = (Button)findViewById(R.id.FirstInit);
-        	mFirstInit.setText(" нопка 1");
-        	abc = "первый запуск";
+        	Button mFirstInit = (Button)findViewById(R.id.MainButton);
+        	mFirstInit.setText("начать тестирование");
         	mFirstInit.setOnClickListener(this);
         	
         }
         else
         {
-           	Button mFirstInit = (Button)findViewById(R.id.FirstInit);
+           	Button mFirstInit = (Button)findViewById(R.id.MainButton);
         	mFirstInit.setText("начать тренировку");
-        	abc = "повторный запуск";
         	mFirstInit.setOnClickListener(this);
         }
         
-        /** Temporary blocked
-    	//Continue training
-    	Button mGoTraining = (Button)findViewById(R.id.GoTraining);
-    	mGoTraining.setOnClickListener(this);
-    	*/
+        //Go settings
+    	Button mGoSettings = (Button)findViewById(R.id.SettingsButton);
+    	mGoSettings.setOnClickListener(this);
+    	
         
         //init main screen
         TextView tv1 = (TextView) findViewById(R.id.TextView01);
-        //char color = getString(R.tests.tweeks.(1));
-        tv1.setText(getString(R.string.tv1T1)+" "+trainingDay+" "+getString(R.string.tv1T2)+" "+trainingWeek+" "+getString(R.string.tv1T3)+" и это "+ abc);        
         TextView tv2 = (TextView) findViewById(R.id.TextView02);
-        tv2.setText(getString(R.string.tv2T1)+" "+ trainingLevel);       
+        String[] dweek = this.getResources().getStringArray(R.array.tweeks);
+        String[] dday = this.getResources().getStringArray(R.array.tdays);
+        if (firstRun == true)
+        {
+        	tv1.setText(getString(R.string.tv1T2));
+        	tv2.setText(getString(R.string.tv2T1)+" "+ getString(R.string.tv2T2));
+        }
+        else
+        {
+        tv1.setText(getString(R.string.tv1T1)+" "+dday[trainingDay-1]+" "+dweek[trainingWeek-1]);        
+        tv2.setText(getString(R.string.tv2T1)+" "+ trainingLevel);
+        }
+        sfirstrun = firstRun;       
     	}
     
     /** Buttons */
@@ -66,19 +72,25 @@ public class HudredPushUps extends Activity implements OnClickListener {
     {
     	switch (v.getId())
     	{
-    	case R.id.FirstInit:
+    	case R.id.MainButton:
     	{
     		Intent intent = new Intent();
-            intent.setClass(this, FirstInit.class);
-            startActivity(intent);
-            break;
-    	}
-    	/** Temporary blocked
-    	case R.id.GoTraining:
-    	{
+ 			if (sfirstrun == true)
+    		intent.setClass(this, FirstInit.class);
+            else
+    		intent.setClass(this, GoTraining.class);
+            startActivity(intent);	
     		break;
     	}
-    	*/
+    	
+    	case R.id.SettingsButton:
+    	{
+    		Intent intent = new Intent();
+    		intent.setClass(this, GoTraining.class);
+    		startActivity(intent);
+    		break;
+    	}
+    	
     	default:
     		break;
     	}

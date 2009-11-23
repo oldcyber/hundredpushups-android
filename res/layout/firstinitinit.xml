@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView 
 xmlns:android="http://schemas.android.com/apk/res/android"
-android:id="@+id/ScrollView01" 
+android:background="#ffffff"
 android:layout_width="wrap_content" 
-android:layout_height="wrap_content">
-
+android:layout_height="fill_parent">
 <TableLayout
 android:layout_width="wrap_content"
 android:layout_height="wrap_content"
 android:stretchColumns="1"
 android:padding="10dip"
 android:orientation="vertical">
+<!-- 
 <TableRow android:paddingBottom="5dip">
 <Spinner 
         android:id="@+id/spinner1"
@@ -27,10 +27,12 @@ android:orientation="vertical">
         android:drawSelectorOnTop="true"
         android:prompt="@string/planet_prompt2"
     />
-</TableRow>        
+</TableRow>
+ -->        
 <TableRow android:paddingBottom="5dip">
 <TextView 
 android:paddingRight="10dip"
+android:textColor="#000000"
 android:gravity="right"
 android:textStyle="bold"
 android:text="Кол-во " 
@@ -38,16 +40,18 @@ android:layout_width="wrap_content"
 android:layout_height="wrap_content" />
 <EditText 
 android:singleLine="true"
+android:textColor="#000000"
 android:numeric="integer"
 android:id="@+id/CountPushUps" 
-android:hint="    input push"
 android:text="0"
 android:layout_width="wrap_content" 
-android:layout_height="wrap_content" />
+android:layout_height="wrap_content"
+android:selectAllOnFocus="true"/>
 </TableRow>
 <TableRow android:paddingBottom="5dip">
 <TextView 
 android:paddingRight="10dip"
+android:textColor="#000000"
 android:gravity="right"
 android:textStyle="bold"
 android:text="Возраст " 
@@ -55,11 +59,13 @@ android:layout_width="wrap_content"
 android:layout_height="wrap_content" />
 <EditText 
 android:singleLine="true"
+android:textColor="#000000"
 android:numeric="integer"
 android:id="@+id/UserAge"
 android:text="0" 
 android:layout_width="wrap_content" 
-android:layout_height="wrap_content" />
+android:layout_height="wrap_content"
+android:selectAllOnFocus="true" />
 </TableRow>
 <TableRow
 android:paddingBottom="5dip">

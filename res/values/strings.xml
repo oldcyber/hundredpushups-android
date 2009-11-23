@@ -9,7 +9,8 @@
     <string name="build">, build</string>
     <string name="Ok">Подтвердить</string>
     <!-- mainbuttons -->
-    <string name="FirstInit">Начать тестирование</string>
+    <string name="MainButton">Начать тестирование</string>
+    <string name="SettingsButton">Настройка</string>
     <string name="GoTraining">Начать тренировку</string>
     <string name="ChangeTraining">Изменить тренировку</string>
 	<!-- home_menu -->
@@ -24,10 +25,10 @@
     <string name="mm_BackPastWeekMenuItem">К прошлой неделе</string>
     <string name="mm_RepeatCurrentWeekMenuItem">Повторить неделю</string>
     <!-- userinfo -->
-    <string name="tv1T1">Вы завершили:</string>
-    <string name="tv1T2">дня</string> 
-    <string name="tv1T3">недели</string>
+    <string name="tv1T1">Это:</string>
+    <string name="tv1T2">Первичное тестирование</string>
     <string name="tv2T1">Ваш уровень:</string>
+    <string name="tv2T2">не определён</string>
     <!-- firstinit -->
     <string name="ManagedPushUps">Количество отжиманий</string>
     <string name="WelcomeFirstInit">НАЧАЛЬНЫЙ ТЕСТ</string>
