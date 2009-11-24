@@ -11,6 +11,28 @@ public final class R {
     public static final class array {
         public static final int tdays=0x7f060001;
         public static final int tweeks=0x7f060000;
+        /**  Week 1 
+         */
+        public static final int week1day1level1=0x7f060002;
+        public static final int week1day1level2=0x7f060003;
+        public static final int week1day1level3=0x7f060004;
+        public static final int week1day2level1=0x7f060005;
+        public static final int week1day2level2=0x7f060006;
+        public static final int week1day2level3=0x7f060007;
+        public static final int week1day3level1=0x7f060008;
+        public static final int week1day3level2=0x7f060009;
+        public static final int week1day3level3=0x7f06000a;
+        /**  Week 2 
+         */
+        public static final int week2day1level1=0x7f06000b;
+        public static final int week2day1level2=0x7f06000c;
+        public static final int week2day1level3=0x7f06000d;
+        public static final int week2day2level1=0x7f06000e;
+        public static final int week2day2level2=0x7f06000f;
+        public static final int week2day2level3=0x7f060010;
+        public static final int week2day3level1=0x7f060011;
+        public static final int week2day3level2=0x7f060012;
+        public static final int week2day3level3=0x7f060013;
     }
     public static final class attr {
     }
@@ -26,21 +48,22 @@ public final class R {
         public static final int mm_flag=0x7f020008;
     }
     public static final class id {
-        public static final int AboutMenuItem=0x7f08000f;
-        public static final int BeginTraining=0x7f08000e;
-        public static final int Button01=0x7f08000d;
-        public static final int CountPushUps=0x7f080004;
-        public static final int ExitMenuItem=0x7f080010;
-        public static final int FirstRunAgree=0x7f080006;
+        public static final int AboutMenuItem=0x7f080010;
+        public static final int BeginTraining=0x7f08000f;
+        public static final int Button01=0x7f08000e;
+        public static final int CountPushUps=0x7f080006;
+        public static final int ExitMenuItem=0x7f080011;
+        public static final int FirstRunAgree=0x7f080008;
         public static final int FirstRunOk=0x7f080003;
-        public static final int ImageView01=0x7f080007;
+        public static final int ImageView01=0x7f080009;
         public static final int LinearLayout01=0x7f080002;
-        public static final int MainButton=0x7f08000b;
-        public static final int SettingsButton=0x7f08000c;
-        public static final int TextView01=0x7f080009;
-        public static final int TextView02=0x7f08000a;
-        public static final int UserAge=0x7f080005;
-        public static final int View01=0x7f080008;
+        public static final int MainButton=0x7f08000c;
+        public static final int SetResultText=0x7f080004;
+        public static final int SettingsButton=0x7f08000d;
+        public static final int TextView01=0x7f08000a;
+        public static final int TextView02=0x7f08000b;
+        public static final int UserAge=0x7f080007;
+        public static final int View01=0x7f080005;
         public static final int build=0x7f080000;
         public static final int copyright=0x7f080001;
     }
@@ -64,6 +87,11 @@ public final class R {
          */
         public static final int ManagedPushUps=0x7f050019;
         public static final int Ok=0x7f050007;
+        public static final int SetResultAge=0x7f050022;
+        public static final int SetResultCount=0x7f050021;
+        /**   firstinitinit 
+         */
+        public static final int SetResultText=0x7f050020;
         public static final int SettingsButton=0x7f050009;
         public static final int TextView01=0x7f050002;
         public static final int WelcomeFirstInit=0x7f05001a;
@@ -90,8 +118,6 @@ public final class R {
         /**  Меню main_menu наверно будет убито 
          */
         public static final int mm_TrainingMenuItem=0x7f05000e;
-        public static final int planet_prompt1=0x7f050020;
-        public static final int planet_prompt2=0x7f050021;
         /**  userinfo 
          */
         public static final int tv1T1=0x7f050015;

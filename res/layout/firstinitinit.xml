@@ -10,32 +10,29 @@ android:layout_height="wrap_content"
 android:stretchColumns="1"
 android:padding="10dip"
 android:orientation="vertical">
-<!-- 
-<TableRow android:paddingBottom="5dip">
-<Spinner 
-        android:id="@+id/spinner1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:drawSelectorOnTop="true"
-        android:prompt="@string/planet_prompt1"
-    />
- 
-<Spinner 
-        android:id="@+id/spinner2"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:drawSelectorOnTop="true"
-        android:prompt="@string/planet_prompt2"
-    />
-</TableRow>
- -->        
+<TextView
+android:textColor="#000000"
+android:text="@string/SetResultText"
+android:id="@+id/SetResultText"
+android:padding="10dip"
+android:textSize="16dp"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content" />   
+<View 
+android:id="@+id/View01" 
+android:layout_width="fill_parent"
+android:background="#c0c0c0ff"
+android:layout_height="1px" />
+<View 
+android:layout_width="fill_parent"
+android:layout_height="20px" />    
 <TableRow android:paddingBottom="5dip">
 <TextView 
 android:paddingRight="10dip"
 android:textColor="#000000"
 android:gravity="right"
 android:textStyle="bold"
-android:text="Кол-во " 
+android:text="@string/SetResultCount" 
 android:layout_width="wrap_content" 
 android:layout_height="wrap_content" />
 <EditText 
@@ -54,7 +51,7 @@ android:paddingRight="10dip"
 android:textColor="#000000"
 android:gravity="right"
 android:textStyle="bold"
-android:text="Возраст " 
+android:text="@string/SetResultAge" 
 android:layout_width="wrap_content" 
 android:layout_height="wrap_content" />
 <EditText 
@@ -69,6 +66,14 @@ android:selectAllOnFocus="true" />
 </TableRow>
 <TableRow
 android:paddingBottom="5dip">
+<TextView 
+android:paddingRight="10dip"
+android:textColor="#000000"
+android:gravity="right"
+android:textStyle="bold"
+android:text="" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" />
 <Button 
 android:text="@string/Ok" 
 android:id="@+id/FirstRunAgree" 

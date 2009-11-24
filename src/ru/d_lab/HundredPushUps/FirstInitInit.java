@@ -17,21 +17,6 @@ public void onCreate(Bundle savedInstanceState)
 {
 super.onCreate(savedInstanceState);
 setContentView(R.layout.firstinitinit);
-/*
-//spinner
-Spinner s1 = (Spinner) findViewById(R.id.spinner1);
-Spinner s2 = (Spinner)findViewById(R.id.spinner2);
-ArrayAdapter<?> adapter1 = ArrayAdapter.createFromResource(
-        this, R.array.tweeks, android.R.layout.simple_spinner_item);
-ArrayAdapter<?> adapter2 = ArrayAdapter.createFromResource(
-        this, R.array.tdays, android.R.layout.simple_spinner_item);
-
-adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-s1.setAdapter(adapter1);
-s2.setAdapter(adapter2);
-*/
 
 //Confirm training level
 Button mFirstRunAgree = (Button)findViewById(R.id.FirstRunAgree);
