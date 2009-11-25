@@ -27,13 +27,14 @@ mFirstRunAgree.setOnClickListener(this);
     {
 		//read parametrs
 		EditText CountPushUpsEditor = (EditText)findViewById(R.id.CountPushUps);
-		EditText UserAgeEditor = (EditText)findViewById(R.id.UserAge);		
+		EditText UserAgeEditor = (EditText)findViewById(R.id.UserAge);	
 		int result = Integer.parseInt(CountPushUpsEditor.getText().toString());
 		int userage = Integer.parseInt(UserAgeEditor.getText().toString());		
 		
 		//select training level
 		int presult = 0;
-
+		int plevel = 0;
+		
 	if (userage<40)	
 		{
 		if (result<5){presult = 1;}
@@ -65,12 +66,18 @@ mFirstRunAgree.setOnClickListener(this);
 		else if (result > 99){presult = 7;}	
 		}
 
-    	//set config to new parameters
+		if (result < 6){plevel = 1;}
+		else if (result > 5 & result <11){plevel=2;}
+		else if (result > 10 & result <21){plevel=3;}
+		else if (result > 20){plevel=4;}
+		
+	//set config to new parameters
 		SharedPreferences settings = getSharedPreferences("FileSettings", 0);
 	    SharedPreferences.Editor editor = settings.edit();
 	    editor.putBoolean("FirstRun", false);
 	    editor.putInt("TrainingLevel", presult);
 	    editor.putInt("UserAge", userage);
+	    editor.putInt("UserLevel",plevel);
 	    editor.commit();
 
 	    // return to main screen

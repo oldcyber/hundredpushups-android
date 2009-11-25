@@ -26,7 +26,7 @@ public class HudredPushUps extends Activity implements OnClickListener {
         int trainingWeek = settings.getInt("TrainingWeek", 1);
         int trainingDay = settings.getInt("TrainingDay", 1);
         int trainingLevel = settings.getInt("TrainingLevel", 0);
-        int userAge = settings.getInt("UserAge", 0);
+        //int userAge = settings.getInt("UserAge", 0);
         
 //        firstRun = true;
         //check applications state and set button text
@@ -47,7 +47,9 @@ public class HudredPushUps extends Activity implements OnClickListener {
         //Go settings
     	Button mGoSettings = (Button)findViewById(R.id.SettingsButton);
     	mGoSettings.setOnClickListener(this);
-    	
+    	//Go stats
+    	Button mGoStats = (Button)findViewById(R.id.StatsButton);
+    	mGoStats.setOnClickListener(this);
         
         //init main screen
         TextView tv1 = (TextView) findViewById(R.id.TextView01);
@@ -82,7 +84,6 @@ public class HudredPushUps extends Activity implements OnClickListener {
             startActivity(intent);	
     		break;
     	}
-    	
     	case R.id.SettingsButton:
     	{
     		Intent intent = new Intent();
@@ -90,7 +91,13 @@ public class HudredPushUps extends Activity implements OnClickListener {
     		startActivity(intent);
     		break;
     	}
-    	
+       	case R.id.StatsButton:
+    	{
+    		Intent intent = new Intent();
+    		intent.setClass(this, GoStats.class);
+    		startActivity(intent);
+    		break;
+    	}
     	default:
     		break;
     	}

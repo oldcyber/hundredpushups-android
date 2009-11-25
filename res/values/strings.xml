@@ -11,6 +11,7 @@
     <!-- mainbuttons -->
     <string name="MainButton">Начать тестирование</string>
     <string name="SettingsButton">Настройка</string>
+    <string name="StatsButton">Статистика</string>
     <string name="GoTraining">Начать тренировку</string>
     <string name="ChangeTraining">Изменить тренировку</string>
 	<!-- home_menu -->
@@ -41,4 +42,12 @@
 	<string name="SetResultText">Введите данные для расчёта Вашего уровня подготовки</string>
 	<string name="SetResultCount">Количество</string>
 	<string name="SetResultAge">Возраст</string>
+	<!--  statistics -->
+	<string name="StatsWelcome">Ваша статистика</string>
+	<string name="StatsAge">Возраст:</string>
+	<string name="StatsAgeRes"></string>
+	<string name="StatsLevel">Тестовый уровень:</string>
+	<string name="StatsStage">Пройдено:</string>
+	<string name="StatsProgress">Max количество отжиманий:</string>
+	
 </resources>

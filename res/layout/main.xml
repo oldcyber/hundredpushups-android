@@ -63,5 +63,11 @@ android:id="@+id/SettingsButton"
 android:layout_width="fill_parent" 
 android:layout_height="wrap_content" 
 android:textStyle="bold"/>
+<Button 
+android:text="@string/StatsButton" 
+android:id="@+id/StatsButton" 
+android:layout_width="fill_parent" 
+android:layout_height="wrap_content" 
+android:textStyle="bold"/>
 </LinearLayout>
 </ScrollView>
