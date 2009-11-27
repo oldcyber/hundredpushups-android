@@ -48,17 +48,16 @@ public final class R {
         public static final int mm_flag=0x7f020008;
     }
     public static final class id {
-        public static final int AboutMenuItem=0x7f08001c;
-        public static final int BeginTraining=0x7f08001b;
-        public static final int Button01=0x7f08001a;
-        public static final int CountPushUps=0x7f080006;
-        public static final int ExitMenuItem=0x7f08001d;
-        public static final int FirstRunAgree=0x7f080008;
-        public static final int FirstRunOk=0x7f080003;
-        public static final int ImageView01=0x7f080009;
-        public static final int LinearLayout01=0x7f080002;
+        public static final int AboutMenuItem=0x7f08001b;
+        public static final int BeginTraining=0x7f08001a;
+        public static final int CountPushUps=0x7f080007;
+        public static final int ExitMenuItem=0x7f08001c;
+        public static final int FirstRunAgree=0x7f080009;
+        public static final int FirstRunOk=0x7f080004;
+        public static final int ImageView01=0x7f08000a;
+        public static final int LinearLayout01=0x7f080003;
         public static final int MainButton=0x7f08000c;
-        public static final int SetResultText=0x7f080004;
+        public static final int SetResultText=0x7f080005;
         public static final int SettingsButton=0x7f08000d;
         public static final int StatsAge=0x7f080011;
         public static final int StatsAgeRes=0x7f080012;
@@ -72,25 +71,29 @@ public final class R {
         public static final int StatsStageRes=0x7f080016;
         public static final int StatsWelcome=0x7f08000f;
         public static final int TableLayout01=0x7f080010;
-        public static final int TextView01=0x7f08000a;
+        public static final int TextView01=0x7f080002;
         public static final int TextView02=0x7f08000b;
-        public static final int UserAge=0x7f080007;
-        public static final int View01=0x7f080005;
+        public static final int UserAge=0x7f080008;
+        public static final int View01=0x7f080006;
         public static final int build=0x7f080000;
         public static final int copyright=0x7f080001;
     }
     public static final class layout {
         public static final int about=0x7f030000;
-        public static final int firstinit=0x7f030001;
-        public static final int firstinitinit=0x7f030002;
-        public static final int main=0x7f030003;
-        public static final int statistics=0x7f030004;
-        public static final int training=0x7f030005;
+        public static final int countdown=0x7f030001;
+        public static final int firstinit=0x7f030002;
+        public static final int firstinitinit=0x7f030003;
+        public static final int main=0x7f030004;
+        public static final int statistics=0x7f030005;
+        public static final int training=0x7f030006;
     }
     public static final class menu {
         public static final int home_menu=0x7f070000;
     }
     public static final class string {
+        /**  Go Training 
+         */
+        public static final int BeginTraining=0x7f05002a;
         public static final int ChangeTraining=0x7f05000c;
         public static final int GoTraining=0x7f05000b;
         /**  mainbuttons 

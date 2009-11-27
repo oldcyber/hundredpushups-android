@@ -7,7 +7,7 @@
     <string name="copyright">© 2009 "D-Lab", OldCyber.</string>
     <string name="version">Version</string>
     <string name="build">, build</string>
-    <string name="Ok">Подтвердить</string>
+    <string name="Ok">Ок</string>
     <!-- mainbuttons -->
     <string name="MainButton">Начать тестирование</string>
     <string name="SettingsButton">Настройка</string>
@@ -49,5 +49,8 @@
 	<string name="StatsLevel">Тестовый уровень:</string>
 	<string name="StatsStage">Пройдено:</string>
 	<string name="StatsProgress">Max количество отжиманий:</string>
+	<!-- Go Training -->
+	<string name="BeginTraining">Начать тренировку</string>
+	
 	
 </resources>

@@ -46,7 +46,7 @@ if (trainingWeek==1){
 
 }
 
-tv1.setText("Тренировка: "+cPlan[0]+" "+cPlan[1]+" "+cPlan[2]+" "+cPlan[3]+" Финальная попытка: "+cPlan[4]);
+tv1.setText("План тренировки: "+cPlan[0]+" / "+cPlan[1]+" / "+cPlan[2]+" / "+cPlan[3]+" Финальная попытка: <b>"+cPlan[4]+"</b>");
 
 
 Button mFirstRunOk = (Button)findViewById(R.id.BeginTraining);
