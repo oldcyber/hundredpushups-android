@@ -66,10 +66,10 @@ mFirstRunAgree.setOnClickListener(this);
 		else if (result > 99){presult = 7;}	
 		}
 
-		if (result < 6){plevel = 1;}
-		else if (result > 5 & result <11){plevel=2;}
-		else if (result > 10 & result <21){plevel=3;}
-		else if (result > 20){plevel=4;}
+		if (result <6){plevel = 1;}
+		else if (result > 5 & result <12){plevel=2;}
+		else if (result > 11 & result <22){plevel=3;}
+		else if (result > 21){plevel=4;}
 		
 	//set config to new parameters
 		SharedPreferences settings = getSharedPreferences("FileSettings", 0);
@@ -82,7 +82,7 @@ mFirstRunAgree.setOnClickListener(this);
 
 	    // return to main screen
 		Intent intent = new Intent();
-	    intent.setClass(this, HudredPushUps.class);
+	    intent.setClass(this, HundredPushUps.class);
 	    startActivity(intent);
 	    }
 }

@@ -55,7 +55,7 @@ mFirstRunOk.setOnClickListener(this);
 	public void onClick(View v)
     {
 		Intent intent = new Intent();
-        intent.setClass(this, HudredPushUps.class);
+        intent.setClass(this, HundredPushUps.class);
         startActivity(intent);
     }
 }

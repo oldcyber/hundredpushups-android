@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
       package="ru.d_lab.HundredPushUps"
-      android:versionCode="1" android:versionName="0.3">
+      android:versionCode="1" android:versionName="0.3a">
     <application android:icon="@drawable/icon" android:label="@string/app_name">
-        <activity android:label="@string/app_name" android:name="HudredPushUps">
+        <activity android:label="@string/app_name" android:name="HundredPushUps">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -27,13 +27,18 @@
 			<category android:name="android.intent.category.SAMPLE_CODE" />
 			</intent-filter>
 		</activity>
-				<activity android:name=".GoStats">
+			<activity android:name=".GoStats">
 			<intent-filter>
 			<action android:name="android.intent.action.MAIN" />
 			<category android:name="android.intent.category.SAMPLE_CODE" />
 			</intent-filter>
 		</activity>
+			<activity android:name=".Configuration">
+				<intent-filter>
+					<action android:name="android.intent.action.MAIN" />
+					<category android:name="android.intent.category.CONFIGURATION" />
+				</intent-filter>
+		</activity>
     </application>
     <uses-sdk android:minSdkVersion="3" />
-
 </manifest> 

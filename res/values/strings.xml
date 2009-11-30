@@ -10,7 +10,7 @@
     <string name="Ok">Ок</string>
     <!-- mainbuttons -->
     <string name="MainButton">Начать тестирование</string>
-    <string name="SettingsButton">Настройка</string>
+    <string name="ConfigurationButton">Настройка</string>
     <string name="StatsButton">Статистика</string>
     <string name="GoTraining">Начать тренировку</string>
     <string name="ChangeTraining">Изменить тренировку</string>
@@ -51,6 +51,8 @@
 	<string name="StatsProgress">Max количество отжиманий:</string>
 	<!-- Go Training -->
 	<string name="BeginTraining">Начать тренировку</string>
+	<!-- Configuration -->
+	<string name="ResetButton">Сбросить всё!</string>
 	
 	
 </resources>

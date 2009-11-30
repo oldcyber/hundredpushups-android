@@ -58,8 +58,8 @@ android:layout_width="fill_parent"
 android:layout_height="wrap_content" 
 android:textStyle="bold"/>
 <Button 
-android:text="@string/SettingsButton" 
-android:id="@+id/SettingsButton" 
+android:text="@string/ConfigurationButton" 
+android:id="@+id/ConfigurationButton" 
 android:layout_width="fill_parent" 
 android:layout_height="wrap_content" 
 android:textStyle="bold"/>
