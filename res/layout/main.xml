@@ -2,7 +2,7 @@
 <ScrollView 
 xmlns:android="http://schemas.android.com/apk/res/android" 
 android:background="#ffffff" 
-android:layout_width="wrap_content"
+android:layout_width="fill_parent"
 android:layout_height="fill_parent">
 <LinearLayout
 android:orientation="vertical"
@@ -69,5 +69,13 @@ android:id="@+id/StatsButton"
 android:layout_width="fill_parent" 
 android:layout_height="wrap_content" 
 android:textStyle="bold"/>
+<!-- 
+<ImageButton 
+android:id="@+id/ImageButton01" 
+android:src="@drawable/ic_menu_preferences"
+android:text="Настройки" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content"/>
+ -->
 </LinearLayout>
 </ScrollView>

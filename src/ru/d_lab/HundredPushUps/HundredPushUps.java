@@ -87,6 +87,7 @@ public class HundredPushUps extends Activity implements OnClickListener {
     	}
     	case R.id.ConfigurationButton:
     	{
+    		//setContentView.(R.layout.configuration);
     		Intent intent = new Intent();
     		intent.setClass(this, Configuration.class);
     		startActivity(intent);

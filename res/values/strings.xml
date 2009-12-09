@@ -8,6 +8,8 @@
     <string name="version">Version</string>
     <string name="build">, build</string>
     <string name="Ok">Ок</string>
+    <string name="dialog_Cancel">Отменить</string>
+    <string name="dialog_Other">Что-то</string>
     <!-- mainbuttons -->
     <string name="MainButton">Начать тестирование</string>
     <string name="ConfigurationButton">Настройка</string>
@@ -53,6 +55,7 @@
 	<string name="BeginTraining">Начать тренировку</string>
 	<!-- Configuration -->
 	<string name="ResetButton">Сбросить всё!</string>
-	
+	<string name="ResetFirstInitButton">Повторить начальный тест</string>
+	<string name="GoDayButton">Перейти к занятию</string>
 	
 </resources>

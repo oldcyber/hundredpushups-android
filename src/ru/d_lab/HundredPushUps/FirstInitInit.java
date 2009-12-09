@@ -1,6 +1,9 @@
 package ru.d_lab.HundredPushUps;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -12,11 +15,54 @@ import android.widget.EditText;
 public class FirstInitInit extends Activity implements OnClickListener {
 
 	/** Called when the activity is first created. */
+    private static final int DIALOG_YES_NO_LONG_MESSAGE = 2;
+	//AlertDialog
+	
+	@Override
+    protected Dialog onCreateDialog(int id) {
+		switch (id) {
+        case DIALOG_YES_NO_LONG_MESSAGE:
+	return new AlertDialog.Builder(FirstInitInit.this)
+    //.setIcon(R.drawable.alert_dialog_icon)
+    .setTitle(R.string.WelcomeFirstInit)
+    .setMessage(R.string.WelcomeFirstInit1)
+    .setPositiveButton(R.string.Ok, new DialogInterface.OnClickListener() {
+        public void onClick(DialogInterface dialog, int whichButton) {
+
+            /* User clicked OK so do some stuff */
+        }
+    })
+    .setNeutralButton(R.string.dialog_Other, new DialogInterface.OnClickListener() {
+        public void onClick(DialogInterface dialog, int whichButton) {
+
+            /* User clicked Something so do some stuff */
+        }
+    })
+    .setNegativeButton(R.string.dialog_Cancel, new DialogInterface.OnClickListener() {
+        public void onClick(DialogInterface dialog, int whichButton) {
+
+            /* User clicked Cancel so do some stuff */
+        }
+    })
+    .create();
+		}
+		return null;
+	}
+	
+	
 	@Override
 public void onCreate(Bundle savedInstanceState)
 {
+
 super.onCreate(savedInstanceState);
 setContentView(R.layout.firstinitinit);
+
+//Button twoButtons2Title = (Button) findViewById(R.id.two_buttons2);
+//twoButtons2Title.setOnClickListener(new OnClickListener() {
+//    public void onClick(View v) {
+        showDialog(DIALOG_YES_NO_LONG_MESSAGE);
+//    }
+//});
 
 //Confirm training level
 Button mFirstRunAgree = (Button)findViewById(R.id.FirstRunAgree);

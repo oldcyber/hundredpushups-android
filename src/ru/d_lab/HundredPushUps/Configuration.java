@@ -18,25 +18,52 @@ setContentView(R.layout.configuration);
 
 Button mResetButton = (Button)findViewById(R.id.ResetButton);
 mResetButton.setOnClickListener(this);
+
+Button mResetFirstInitButton = (Button)findViewById(R.id.ResetFirstInitButton);
+mResetFirstInitButton.setOnClickListener(this);
+
+Button mGoDayButton = (Button)findViewById(R.id.GoDayButton);
+mGoDayButton.setOnClickListener(this);
+
 }
 	public void onClick(View v)
     {
-		//Reset config
-		SharedPreferences settings = getSharedPreferences("FileSettings", 0);
-	    SharedPreferences.Editor editor = settings.edit();
-	    editor.putBoolean("FirstRun", true);
-	    editor.putInt("TrainingWeek", 1);
-	    editor.putInt("TrainingDay", 1);
-	    editor.putInt("TrainingLevel", 0);
-	    editor.putInt("UserAge", 0);
-	    editor.putInt("UserLevel",0);
-	    editor.putInt("UserProgress", 0);
-	    editor.commit();
+		switch (v.getId())
+		{
+		case R.id.ResetButton:
+    	{
+    		//Reset config
+    		SharedPreferences settings = getSharedPreferences("FileSettings", 0);
+    	    SharedPreferences.Editor editor = settings.edit();
+    	    editor.putBoolean("FirstRun", true);
+    	    editor.putInt("TrainingWeek", 1);
+    	    editor.putInt("TrainingDay", 1);
+    	    editor.putInt("TrainingLevel", 0);
+    	    editor.putInt("UserAge", 0);
+    	    editor.putInt("UserLevel",0);
+    	    editor.putInt("UserProgress", 0);
+    	    editor.commit();
+    		
+    		//Return to main menu
+    		Intent intent = new Intent();
+            intent.setClass(this, HundredPushUps.class);
+            startActivity(intent);	
+    		break;
+    	}
+		case R.id.ResetFirstInitButton:
+		{
+			Intent intent = new Intent();
+            intent.setClass(this, FirstInitInit.class);
+            startActivity(intent);	
+			break;
+		}
+		case R.id.GoDayButton:
+		{
+			
+			break;
+		}
 		
-		//Return to main menu
-		Intent intent = new Intent();
-        intent.setClass(this, HundredPushUps.class);
-        startActivity(intent);
+		}
     }
 }
 
