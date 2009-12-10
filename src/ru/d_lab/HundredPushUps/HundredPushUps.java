@@ -79,7 +79,7 @@ public class HundredPushUps extends Activity implements OnClickListener {
     	{
     		Intent intent = new Intent();
  			if (sfirstrun == true)
-    		intent.setClass(this, FirstInit.class);
+    		intent.setClass(this, FirstInitInit.class);
             else
     		intent.setClass(this, GoTraining.class);
             startActivity(intent);	
@@ -90,6 +90,7 @@ public class HundredPushUps extends Activity implements OnClickListener {
     		//setContentView.(R.layout.configuration);
     		Intent intent = new Intent();
     		intent.setClass(this, Configuration.class);
+    		//intent.setClass(this, PreferencesXml.class);
     		startActivity(intent);
     		break;
     	}

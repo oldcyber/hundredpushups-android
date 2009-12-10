@@ -16,6 +16,7 @@ public class FirstInitInit extends Activity implements OnClickListener {
 
 	/** Called when the activity is first created. */
     private static final int DIALOG_YES_NO_LONG_MESSAGE = 2;
+    private static final int DIALOG_2 = 3;
 	//AlertDialog
 	
 	@Override
@@ -23,7 +24,7 @@ public class FirstInitInit extends Activity implements OnClickListener {
 		switch (id) {
         case DIALOG_YES_NO_LONG_MESSAGE:
 	return new AlertDialog.Builder(FirstInitInit.this)
-    //.setIcon(R.drawable.alert_dialog_icon)
+    .setIcon(R.drawable.light)
     .setTitle(R.string.WelcomeFirstInit)
     .setMessage(R.string.WelcomeFirstInit1)
     .setPositiveButton(R.string.Ok, new DialogInterface.OnClickListener() {
@@ -32,19 +33,32 @@ public class FirstInitInit extends Activity implements OnClickListener {
             /* User clicked OK so do some stuff */
         }
     })
-    .setNeutralButton(R.string.dialog_Other, new DialogInterface.OnClickListener() {
-        public void onClick(DialogInterface dialog, int whichButton) {
-
-            /* User clicked Something so do some stuff */
-        }
-    })
-    .setNegativeButton(R.string.dialog_Cancel, new DialogInterface.OnClickListener() {
-        public void onClick(DialogInterface dialog, int whichButton) {
-
-            /* User clicked Cancel so do some stuff */
-        }
-    })
+//   .setNeutralButton(R.string.dialog_Other, new DialogInterface.OnClickListener() {
+//        public void onClick(DialogInterface dialog, int whichButton) {
+//
+//            /* User clicked Something so do some stuff */
+//        }
+//    })
+//    .setNegativeButton(R.string.dialog_Cancel, new DialogInterface.OnClickListener() {
+//        public void onClick(DialogInterface dialog, int whichButton) {
+//
+//            /* User clicked Cancel so do some stuff */
+//        }
+//    })
     .create();
+        case DIALOG_2:
+        	return new AlertDialog.Builder(FirstInitInit.this)
+            .setIcon(R.drawable.light)
+            .setTitle(R.string.WelcomeFirstInit)
+            .setMessage(R.string.WelcomeFirstInit1)
+            .setPositiveButton(R.string.Ok, new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int whichButton) {
+                	//setContentView(R.layout.firstinitinit);
+                    /* User clicked OK so do some stuff */
+                }
+            })		
+            .create();
+		
 		}
 		return null;
 	}
@@ -71,6 +85,8 @@ mFirstRunAgree.setOnClickListener(this);
 }
 	public void onClick(View v)
     {
+
+		
 		//read parametrs
 		EditText CountPushUpsEditor = (EditText)findViewById(R.id.CountPushUps);
 		EditText UserAgeEditor = (EditText)findViewById(R.id.UserAge);	
@@ -80,7 +96,15 @@ mFirstRunAgree.setOnClickListener(this);
 		//select training level
 		int presult = 0;
 		int plevel = 0;
-		
+if (result==0)
+{
+	showDialog(DIALOG_2);
+}
+else if (userage==0)
+{
+	showDialog(DIALOG_2);
+}
+else {
 	if (userage<40)	
 		{
 		if (result<5){presult = 1;}
@@ -131,4 +155,5 @@ mFirstRunAgree.setOnClickListener(this);
 	    intent.setClass(this, HundredPushUps.class);
 	    startActivity(intent);
 	    }
+    }
 }

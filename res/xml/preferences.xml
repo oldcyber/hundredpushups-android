@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen
-  xmlns:android="http://schemas.android.com/apk/res/android">
+	xmlns:android="http://schemas.android.com/apk/res/android">
+  
+<PreferenceCategory
+	android:title="@string/main_preferences">
 <Preference 
-android:defaultValue="0" 
-android:title="First Init" 
-android:key="first_init"></Preference>
+android:title="@string/GoDayButton" 
+android:key="GoDayButton" 
+android:summary="@string/GoDayButtonSummary" />
+<Preference 
+android:title="@string/ResetFirstInitButton" 
+android:key="ResetFirstInitButton" 
+android:summary="@string/ResetFirstInitButtonSummary" />
+<Preference 
+android:title="@string/ResetButton" 
+android:key="ResetButton" 
+android:summary="@string/ResetButtonSummary" />
+</PreferenceCategory>            
 </PreferenceScreen>
