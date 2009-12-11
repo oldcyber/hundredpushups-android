@@ -34,14 +34,16 @@ public class HundredPushUps extends Activity implements OnClickListener {
         if (firstRun == true)
         {
         	Button mFirstInit = (Button)findViewById(R.id.MainButton);
-        	mFirstInit.setText("начать тестирование");
+        	mFirstInit.setText(R.string.MainButton);
+        	//mFirstInit.setText("начать тестирование");
         	mFirstInit.setOnClickListener(this);
         	
         }
         else
         {
            	Button mFirstInit = (Button)findViewById(R.id.MainButton);
-        	mFirstInit.setText("начать тренировку");
+           	mFirstInit.setText(R.string.BeginTraining);
+           	//mFirstInit.setText("начать тренировку");
         	mFirstInit.setOnClickListener(this);
         }
         

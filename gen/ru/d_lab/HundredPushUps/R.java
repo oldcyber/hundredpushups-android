@@ -37,16 +37,17 @@ public final class R {
     public static final class attr {
     }
     public static final class drawable {
-        public static final int ic_menu_agenda=0x7f020000;
-        public static final int ic_menu_home=0x7f020001;
-        public static final int ic_menu_mark=0x7f020002;
-        public static final int ic_menu_preferences=0x7f020003;
-        public static final int ic_menu_star=0x7f020004;
-        public static final int icon=0x7f020005;
-        public static final int light=0x7f020006;
-        public static final int logo=0x7f020007;
-        public static final int mm_chart=0x7f020008;
-        public static final int mm_flag=0x7f020009;
+        public static final int ic_bullet_key_permission=0x7f020000;
+        public static final int ic_menu_agenda=0x7f020001;
+        public static final int ic_menu_home=0x7f020002;
+        public static final int ic_menu_mark=0x7f020003;
+        public static final int ic_menu_preferences=0x7f020004;
+        public static final int ic_menu_star=0x7f020005;
+        public static final int icon=0x7f020006;
+        public static final int light=0x7f020007;
+        public static final int logo=0x7f020008;
+        public static final int mm_chart=0x7f020009;
+        public static final int mm_flag=0x7f02000a;
     }
     public static final class id {
         public static final int AboutMenuItem=0x7f08001d;
@@ -96,11 +97,13 @@ public final class R {
     public static final class string {
         /**  Go Training 
          */
-        public static final int BeginTraining=0x7f050028;
+        public static final int BeginTraining=0x7f05002a;
         public static final int ChangeTraining=0x7f05000e;
         public static final int ConfigurationButton=0x7f05000b;
-        public static final int GoDayButton=0x7f05002b;
-        public static final int GoDayButtonSummary=0x7f05002d;
+        public static final int ErrorFirstInit=0x7f05001f;
+        public static final int ErrorFirstInit1=0x7f050020;
+        public static final int GoDayButton=0x7f05002d;
+        public static final int GoDayButtonSummary=0x7f05002f;
         public static final int GoTraining=0x7f05000d;
         /**  mainbuttons 
          */
@@ -111,24 +114,22 @@ public final class R {
         public static final int Ok=0x7f050007;
         /**  Configuration 
          */
-        public static final int ResetButton=0x7f050029;
-        public static final int ResetButtonSummary=0x7f05002f;
-        public static final int ResetFirstInitButton=0x7f05002a;
-        public static final int ResetFirstInitButtonSummary=0x7f05002e;
-        public static final int SetResultAge=0x7f050021;
-        public static final int SetResultCount=0x7f050020;
-        /**   firstinitinit 
-         */
-        public static final int SetResultText=0x7f05001f;
-        public static final int StatsAge=0x7f050023;
-        public static final int StatsAgeRes=0x7f050024;
+        public static final int ResetButton=0x7f05002b;
+        public static final int ResetButtonSummary=0x7f050031;
+        public static final int ResetFirstInitButton=0x7f05002c;
+        public static final int ResetFirstInitButtonSummary=0x7f050030;
+        public static final int SetResultAge=0x7f050023;
+        public static final int SetResultCount=0x7f050022;
+        public static final int SetResultText=0x7f050021;
+        public static final int StatsAge=0x7f050025;
+        public static final int StatsAgeRes=0x7f050026;
         public static final int StatsButton=0x7f05000c;
-        public static final int StatsLevel=0x7f050025;
-        public static final int StatsProgress=0x7f050027;
-        public static final int StatsStage=0x7f050026;
+        public static final int StatsLevel=0x7f050027;
+        public static final int StatsProgress=0x7f050029;
+        public static final int StatsStage=0x7f050028;
         /**   statistics 
          */
-        public static final int StatsWelcome=0x7f050022;
+        public static final int StatsWelcome=0x7f050024;
         public static final int TextView01=0x7f050002;
         public static final int WelcomeFirstInit=0x7f05001d;
         public static final int WelcomeFirstInit1=0x7f05001e;
@@ -145,7 +146,7 @@ public final class R {
         public static final int legal=0x7f050003;
         /**   Preferences 
          */
-        public static final int main_preferences=0x7f05002c;
+        public static final int main_preferences=0x7f05002e;
         public static final int mm_BackPastWeekMenuItem=0x7f050016;
         public static final int mm_ContinueTrainingMenuItem=0x7f050014;
         public static final int mm_NewTrainigMenuItem=0x7f050013;

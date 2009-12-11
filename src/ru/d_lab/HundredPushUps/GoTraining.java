@@ -1,7 +1,9 @@
 package ru.d_lab.HundredPushUps;
 
 import android.app.Activity;
-import android.content.Intent;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +13,30 @@ import android.widget.TextView;
 
 public class GoTraining extends Activity implements OnClickListener {
 	/** Called when the activity is first created. */
+	private static final int DIALOG_1 = 1;
+	
+	@Override
+    protected Dialog onCreateDialog(int id) {
+		switch (id) {
+        case DIALOG_1:
+        	return new AlertDialog.Builder(GoTraining.this)
+            .setIcon(R.drawable.light)
+            .setTitle(R.string.WelcomeFirstInit)
+            .setMessage(R.string.WelcomeFirstInit1)
+            .setPositiveButton(R.string.Ok, new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int whichButton) {
+                	//setContentView(R.layout.firstinitinit);
+                    /* User clicked OK so do some stuff */
+                }
+            })		
+            .create();
+		
+		}
+		return null;
+	}
+	
+	
+	
 	@Override
 public void onCreate(Bundle savedInstanceState)
 {
@@ -54,9 +80,11 @@ mFirstRunOk.setOnClickListener(this);
 }
 	public void onClick(View v)
     {
-		Intent intent = new Intent();
-        intent.setClass(this, HundredPushUps.class);
-        startActivity(intent);
+		showDialog(DIALOG_1);	
+		
+		//Intent intent = new Intent();
+        //intent.setClass(this, HundredPushUps.class);
+        //startActivity(intent);
     }
 }
 

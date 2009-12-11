@@ -48,9 +48,9 @@ public class FirstInitInit extends Activity implements OnClickListener {
     .create();
         case DIALOG_2:
         	return new AlertDialog.Builder(FirstInitInit.this)
-            .setIcon(R.drawable.light)
-            .setTitle(R.string.WelcomeFirstInit)
-            .setMessage(R.string.WelcomeFirstInit1)
+            .setIcon(R.drawable.ic_bullet_key_permission)
+            .setTitle(R.string.ErrorFirstInit)
+            .setMessage(R.string.ErrorFirstInit1)
             .setPositiveButton(R.string.Ok, new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int whichButton) {
                 	//setContentView(R.layout.firstinitinit);
