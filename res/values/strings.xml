@@ -50,6 +50,13 @@
 	<string name="StatsProgress">Max количество отжиманий:</string>
 	<!-- Go Training -->
 	<string name="BeginTraining">Начать тренировку</string>
+	<string name="TrainingHeader2">Количество</string>
+	<string name="Training1">Подход 1:</string>
+	<string name="Training2">Подход 2:</string>
+	<string name="Training3">Подход 3:</string>
+	<string name="Training4">Подход 4:</string>
+	<string name="Training5">Подход 5:</string>	
+	<string name="TrainingMax">не менее</string>
 	<!-- Configuration -->
 	<string name="ResetButton">Сбросить всё!</string>
 	<string name="ResetFirstInitButton">Повторить начальный тест</string>

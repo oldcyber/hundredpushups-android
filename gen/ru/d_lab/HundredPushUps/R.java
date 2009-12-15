@@ -50,11 +50,11 @@ public final class R {
         public static final int mm_flag=0x7f02000a;
     }
     public static final class id {
-        public static final int AboutMenuItem=0x7f08001d;
-        public static final int BeginTraining=0x7f08001c;
+        public static final int AboutMenuItem=0x7f080022;
+        public static final int BeginTraining=0x7f080021;
         public static final int ConfigurationButton=0x7f08000f;
         public static final int CountPushUps=0x7f080008;
-        public static final int ExitMenuItem=0x7f08001e;
+        public static final int ExitMenuItem=0x7f080023;
         public static final int FirstRunAgree=0x7f08000a;
         public static final int GoDayButton=0x7f080002;
         public static final int ImageView01=0x7f08000c;
@@ -77,6 +77,11 @@ public final class R {
         public static final int TableLayout01=0x7f080012;
         public static final int TextView01=0x7f080005;
         public static final int TextView02=0x7f08000d;
+        public static final int Trainig1=0x7f08001c;
+        public static final int Trainig2=0x7f08001d;
+        public static final int Trainig3=0x7f08001e;
+        public static final int Trainig4=0x7f08001f;
+        public static final int Trainig5=0x7f080020;
         public static final int UserAge=0x7f080009;
         public static final int View01=0x7f080007;
         public static final int build=0x7f080000;
@@ -102,8 +107,8 @@ public final class R {
         public static final int ConfigurationButton=0x7f05000b;
         public static final int ErrorFirstInit=0x7f05001f;
         public static final int ErrorFirstInit1=0x7f050020;
-        public static final int GoDayButton=0x7f05002d;
-        public static final int GoDayButtonSummary=0x7f05002f;
+        public static final int GoDayButton=0x7f050034;
+        public static final int GoDayButtonSummary=0x7f050036;
         public static final int GoTraining=0x7f05000d;
         /**  mainbuttons 
          */
@@ -114,10 +119,10 @@ public final class R {
         public static final int Ok=0x7f050007;
         /**  Configuration 
          */
-        public static final int ResetButton=0x7f05002b;
-        public static final int ResetButtonSummary=0x7f050031;
-        public static final int ResetFirstInitButton=0x7f05002c;
-        public static final int ResetFirstInitButtonSummary=0x7f050030;
+        public static final int ResetButton=0x7f050032;
+        public static final int ResetButtonSummary=0x7f050038;
+        public static final int ResetFirstInitButton=0x7f050033;
+        public static final int ResetFirstInitButtonSummary=0x7f050037;
         public static final int SetResultAge=0x7f050023;
         public static final int SetResultCount=0x7f050022;
         public static final int SetResultText=0x7f050021;
@@ -131,6 +136,13 @@ public final class R {
          */
         public static final int StatsWelcome=0x7f050024;
         public static final int TextView01=0x7f050002;
+        public static final int Training1=0x7f05002c;
+        public static final int Training2=0x7f05002d;
+        public static final int Training3=0x7f05002e;
+        public static final int Training4=0x7f05002f;
+        public static final int Training5=0x7f050030;
+        public static final int TrainingHeader2=0x7f05002b;
+        public static final int TrainingMax=0x7f050031;
         public static final int WelcomeFirstInit=0x7f05001d;
         public static final int WelcomeFirstInit1=0x7f05001e;
         public static final int app_name=0x7f050001;
@@ -146,7 +158,7 @@ public final class R {
         public static final int legal=0x7f050003;
         /**   Preferences 
          */
-        public static final int main_preferences=0x7f05002e;
+        public static final int main_preferences=0x7f050035;
         public static final int mm_BackPastWeekMenuItem=0x7f050016;
         public static final int mm_ContinueTrainingMenuItem=0x7f050014;
         public static final int mm_NewTrainigMenuItem=0x7f050013;
