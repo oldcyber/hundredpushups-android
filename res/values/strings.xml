@@ -10,6 +10,7 @@
     <string name="Ok">Ок</string>
     <string name="dialog_Cancel">Отменить</string>
     <string name="dialog_Other">Что-то</string>
+    <string name="dialog_Save">Сохранить</string>
     <!-- mainbuttons -->
     <string name="MainButton">Начать тестирование</string>
     <string name="ConfigurationButton">Настройка</string>
@@ -57,10 +58,13 @@
 	<string name="Training4">Подход 4:</string>
 	<string name="Training5">Подход 5:</string>	
 	<string name="TrainingMax">не менее</string>
+	<!-- <string name="chronometer_initial_format">Initial format: <xliff:g id="initial-format">%s</xliff:g></string>  -->
+	<string name="chronometer_initial_format">Initial format:</string>
 	<!-- Configuration -->
 	<string name="ResetButton">Сбросить всё!</string>
 	<string name="ResetFirstInitButton">Повторить начальный тест</string>
 	<string name="GoDayButton">Перейти к занятию</string>
+	<string name="RestTimeText">Время отдыха (в сек.)</string>
 	<!--  Preferences -->
 	<string name="main_preferences">Основные настройки</string>
 	<string name="GoDayButtonSummary">Перейти к нужному дню или неделе</string>

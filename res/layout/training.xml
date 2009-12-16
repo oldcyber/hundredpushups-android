@@ -17,11 +17,13 @@ android:layout_height="wrap_content">
 		android:layout_width="wrap_content" 
 		android:layout_height="wrap_content" />
 	<TextView 
+		android:textStyle="bold"
 		android:padding="3dip"
+		android:gravity="center"
 		android:textColor="#000000"
 		android:text="@string/TrainingHeader2" 
 		android:layout_width="wrap_content" 
-		android:layout_height="wrap_content" />
+		android:layout_height="wrap_content"/>
 </TableRow>
     <View
         android:layout_height="2dip"
@@ -36,6 +38,7 @@ android:layout_height="wrap_content">
 		android:layout_width="wrap_content" 
 		android:layout_height="wrap_content" />
 	<TextView 
+		android:gravity="center"
 		android:textStyle="bold"
 		android:padding="3dip"
 		android:textColor="#000000"
@@ -53,6 +56,7 @@ android:layout_height="wrap_content">
 		android:layout_width="wrap_content" 
 		android:layout_height="wrap_content" />
 	<TextView 
+		android:gravity="center"
 		android:textStyle="bold"
 		android:padding="3dip"
 		android:textColor="#000000"
@@ -70,6 +74,7 @@ android:layout_height="wrap_content">
 		android:layout_width="wrap_content" 
 		android:layout_height="wrap_content" />
 	<TextView 
+		android:gravity="center"
 		android:textStyle="bold"
 		android:padding="3dip"
 		android:textColor="#000000"
@@ -87,6 +92,7 @@ android:layout_height="wrap_content">
 		android:layout_width="wrap_content" 
 		android:layout_height="wrap_content" />
 	<TextView 
+		android:gravity="center"
 		android:textStyle="bold"
 		android:padding="3dip"
 		android:textColor="#000000"
@@ -104,6 +110,7 @@ android:layout_height="wrap_content">
 		android:layout_width="wrap_content" 
 		android:layout_height="wrap_content" />
 	<TextView 
+		android:gravity="center"
 		android:textStyle="bold"
 		android:padding="3dip"
 		android:textColor="#000000"
@@ -118,6 +125,7 @@ android:layout_height="wrap_content">
 android:layout_width="fill_parent"
 android:layout_height="20px" />
 <Button 
+android:textStyle="bold"
 android:textColor="#000000"
 android:text="@string/BeginTraining" 
 android:id="@+id/BeginTraining" 

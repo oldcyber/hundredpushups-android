@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class Configuration extends Activity implements OnClickListener {
 	/** Called when the activity is first created. */
@@ -16,8 +17,16 @@ public void onCreate(Bundle savedInstanceState)
 super.onCreate(savedInstanceState);
 setContentView(R.layout.configuration);
 
+//SharedPreferences settings = getSharedPreferences("FileSettings", 0);
+//long restTime = settings.getLong("RestTime", 10);
+//EditText tv1 = (EditText) findViewById(R.id.RestTime);
+//tv1.setText(valueOf(restTime));
+
 Button mResetButton = (Button)findViewById(R.id.ResetButton);
 mResetButton.setOnClickListener(this);
+
+Button mSaveData = (Button)findViewById(R.id.SaveData);
+mSaveData.setOnClickListener(this);
 
 Button mResetFirstInitButton = (Button)findViewById(R.id.ResetFirstInitButton);
 mResetFirstInitButton.setOnClickListener(this);
@@ -26,6 +35,10 @@ Button mGoDayButton = (Button)findViewById(R.id.GoDayButton);
 mGoDayButton.setOnClickListener(this);
 
 }
+	private String valueOf(long restTime) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	public void onClick(View v)
     {
 		switch (v.getId())
@@ -42,6 +55,7 @@ mGoDayButton.setOnClickListener(this);
     	    editor.putInt("UserAge", 0);
     	    editor.putInt("UserLevel",0);
     	    editor.putInt("UserProgress", 0);
+    	    editor.putLong("RestTime", 0);
     	    editor.commit();
     		
     		//Return to main menu
@@ -62,7 +76,21 @@ mGoDayButton.setOnClickListener(this);
 			
 			break;
 		}
-		
+		case R.id.SaveData:
+		{
+			EditText UserRestTime = (EditText)findViewById(R.id.RestTime);
+			int RestTime = Integer.parseInt(UserRestTime.getText().toString());	
+			SharedPreferences settings = getSharedPreferences("FileSettings", 0);
+    	    SharedPreferences.Editor editor = settings.edit();
+    	    editor.putLong("RestTime", RestTime);
+    	    editor.commit();
+    	    
+    		Intent intent = new Intent();
+            intent.setClass(this, HundredPushUps.class);
+            startActivity(intent);	
+            
+    	    break;
+		}
 		}
     }
 }

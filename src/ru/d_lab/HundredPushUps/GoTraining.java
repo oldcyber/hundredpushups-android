@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -69,7 +70,8 @@ mFirstRunOk.setOnClickListener(this);
 }
 
 	@Override
-    protected Dialog onCreateDialog(int id) {
+
+	protected Dialog onCreateDialog(int id) {
 		switch (id) {
         case DIALOG_1:
         	return new AlertDialog.Builder(GoTraining.this)
@@ -90,11 +92,11 @@ mFirstRunOk.setOnClickListener(this);
 	
 	public void onClick(View v)
     {
-		showDialog(DIALOG_1);	
+		//showDialog(DIALOG_1);	
 		
-		//Intent intent = new Intent();
-        //intent.setClass(this, HundredPushUps.class);
-        //startActivity(intent);
+		Intent intent = new Intent();
+        intent.setClass(this, Timer.class);
+        startActivity(intent);
     }
 }
 
