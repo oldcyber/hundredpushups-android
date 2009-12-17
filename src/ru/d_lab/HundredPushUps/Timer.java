@@ -13,6 +13,7 @@ public class Timer extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         
+             
         setContentView(R.layout.timer);
         SharedPreferences settings = getSharedPreferences("FileSettings", 0);
         long restTime = settings.getLong("RestTime", 10);
@@ -28,7 +29,6 @@ public class Timer extends Activity {
             	TextView tv1 = (TextView) findViewById(R.id.TimerText);
             	tv1.setText("done!");
             }
-         }.start();
-        
-    }  
+         }.start();  
+    }
 }

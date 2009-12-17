@@ -35,10 +35,13 @@ Button mGoDayButton = (Button)findViewById(R.id.GoDayButton);
 mGoDayButton.setOnClickListener(this);
 
 }
+	/*
 	private String valueOf(long restTime) {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	*/
+	
 	public void onClick(View v)
     {
 		switch (v.getId())
