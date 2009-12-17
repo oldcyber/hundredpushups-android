@@ -54,6 +54,7 @@ android:layout_height="20px" />
 <Button 
 android:text="@string/MainButton" 
 android:id="@+id/MainButton" 
+android:drawableLeft="@drawable/light"
 android:layout_width="fill_parent" 
 android:layout_height="wrap_content" 
 android:textStyle="bold"/>
