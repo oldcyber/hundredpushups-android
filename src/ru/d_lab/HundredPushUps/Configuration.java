@@ -83,6 +83,7 @@ mGoDayButton.setOnClickListener(this);
 		{
 			EditText UserRestTime = (EditText)findViewById(R.id.RestTime);
 			int RestTime = Integer.parseInt(UserRestTime.getText().toString());	
+			
 			SharedPreferences settings = getSharedPreferences("FileSettings", 0);
     	    SharedPreferences.Editor editor = settings.edit();
     	    editor.putLong("RestTime", RestTime);

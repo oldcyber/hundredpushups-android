@@ -131,6 +131,7 @@ public final class R {
         public static final int ResetButtonSummary=0x7f05003b;
         public static final int ResetFirstInitButton=0x7f050035;
         public static final int ResetFirstInitButtonSummary=0x7f05003a;
+        public static final int Rest=0x7f050033;
         public static final int RestTimeText=0x7f050037;
         public static final int SetResultAge=0x7f050024;
         public static final int SetResultCount=0x7f050023;
@@ -156,9 +157,6 @@ public final class R {
         public static final int WelcomeFirstInit1=0x7f05001f;
         public static final int app_name=0x7f050001;
         public static final int build=0x7f050006;
-        /**  <string name="chronometer_initial_format">Initial format: <xliff:g id="initial-format">%s</xliff:g></string>  
-         */
-        public static final int chronometer_initial_format=0x7f050033;
         public static final int copyright=0x7f050004;
         public static final int dialog_Cancel=0x7f050008;
         public static final int dialog_Other=0x7f050009;

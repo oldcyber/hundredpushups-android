@@ -58,8 +58,7 @@
 	<string name="Training4">Подход 4:</string>
 	<string name="Training5">Подход 5:</string>	
 	<string name="TrainingMax">не менее</string>
-	<!-- <string name="chronometer_initial_format">Initial format: <xliff:g id="initial-format">%s</xliff:g></string>  -->
-	<string name="chronometer_initial_format">Initial format:</string>
+	<string name="Rest">Отдых</string>
 	<!-- Configuration -->
 	<string name="ResetButton">Сбросить всё!</string>
 	<string name="ResetFirstInitButton">Повторить начальный тест</string>

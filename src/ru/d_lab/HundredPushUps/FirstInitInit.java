@@ -15,17 +15,17 @@ import android.widget.EditText;
 public class FirstInitInit extends Activity implements OnClickListener {
 
 	/** Called when the activity is first created. */
-    private static final int DIALOG_YES_NO_LONG_MESSAGE = 2;
+    private static final int DIALOG_1 = 2;
     private static final int DIALOG_2 = 3;
 	//AlertDialog
 	
 	@Override
     protected Dialog onCreateDialog(int id) {
 		switch (id) {
-        case DIALOG_YES_NO_LONG_MESSAGE:
+        case DIALOG_1:
 	return new AlertDialog.Builder(FirstInitInit.this)
     .setIcon(R.drawable.light)
-    .setTitle(R.string.WelcomeFirstInit)
+    //.setTitle(R.string.WelcomeFirstInit)
     .setMessage(R.string.WelcomeFirstInit1)
     .setPositiveButton(R.string.Ok, new DialogInterface.OnClickListener() {
         public void onClick(DialogInterface dialog, int whichButton) {
@@ -74,7 +74,7 @@ setContentView(R.layout.firstinitinit);
 //Button twoButtons2Title = (Button) findViewById(R.id.two_buttons2);
 //twoButtons2Title.setOnClickListener(new OnClickListener() {
 //    public void onClick(View v) {
-        showDialog(DIALOG_YES_NO_LONG_MESSAGE);
+        showDialog(DIALOG_1);
 //    }
 //});
 

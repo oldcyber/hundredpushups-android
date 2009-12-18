@@ -15,7 +15,11 @@ import android.widget.TextView;
 public class GoTraining extends Activity implements OnClickListener {
 	/** Called when the activity is first created. */
 	private static final int DIALOG_1 = 1;
-	private static final int DIALOG_REST=5;
+	private static final int DIALOG_2 = 2;
+	private static final int DIALOG_3 = 3;
+	private static final int DIALOG_4 = 4;
+	private static final int DIALOG_5 = 5;
+	private static final int DIALOG_REST=6;
 	
 	@Override
 public void onCreate(Bundle savedInstanceState)
@@ -23,7 +27,10 @@ public void onCreate(Bundle savedInstanceState)
 super.onCreate(savedInstanceState);
 setContentView(R.layout.training);
 
+
+
 //Load application preferences
+
 SharedPreferences settings = getSharedPreferences("FileSettings", 0);
 int trainingWeek = settings.getInt("TrainingWeek", 1);
 int trainingDay = settings.getInt("TrainingDay", 1);
@@ -34,8 +41,8 @@ TextView tv3 = (TextView) findViewById(R.id.Trainig3);
 TextView tv4 = (TextView) findViewById(R.id.Trainig4);
 TextView tv5 = (TextView) findViewById(R.id.Trainig5); 
 String[] cPlan = null;
-//trainingLevel = 1;
 
+//trainingLevel = 1;
 if (trainingWeek==1){
 	if (trainingDay==1){
 		if (trainingLevel==1){cPlan = this.getResources().getStringArray(R.array.week1day1level1);}
@@ -74,17 +81,87 @@ mFirstRunOk.setOnClickListener(this);
 		
 		SharedPreferences settings = getSharedPreferences("FileSettings", 0);
         long restTime = settings.getLong("RestTime", 10);
-        restTime = restTime*1000;
-        
-		switch (id) {
+        restTime = (restTime+1)*1000;
+        int trainingWeek = settings.getInt("TrainingWeek", 1);
+    	int trainingDay = settings.getInt("TrainingDay", 1);
+    	int trainingLevel = settings.getInt("TrainingLevel", 0);
+    	
+//   	TextView tv1 = (TextView) findViewById(R.id.Trainig1);
+//    	TextView tv2 = (TextView) findViewById(R.id.Trainig2);
+//    	TextView tv3 = (TextView) findViewById(R.id.Trainig3);
+//    	TextView tv4 = (TextView) findViewById(R.id.Trainig4);
+//    	TextView tv5 = (TextView) findViewById(R.id.Trainig5); 
+    	
+    	String[] cPlan = null;
+    	//int podhod=0;
+    	if (trainingWeek==1){
+    		if (trainingDay==1){
+    			if (trainingLevel==1){cPlan = this.getResources().getStringArray(R.array.week1day1level1);}
+    			else if (trainingLevel==2){cPlan = this.getResources().getStringArray(R.array.week1day1level2);}
+    			else {cPlan = this.getResources().getStringArray(R.array.week1day1level3);}
+    		}
+    		else if (trainingDay==2){
+    			if (trainingLevel==1){cPlan = this.getResources().getStringArray(R.array.week1day2level1);}
+    			else if (trainingLevel==2){cPlan = this.getResources().getStringArray(R.array.week1day2level2);}
+    			else {cPlan = this.getResources().getStringArray(R.array.week1day2level3);}
+    		}
+    		else if(trainingDay==3){
+    			if (trainingLevel==1){cPlan = this.getResources().getStringArray(R.array.week1day3level1);}
+    			else if (trainingLevel==2){cPlan = this.getResources().getStringArray(R.array.week1day3level2);}
+    			else {cPlan = this.getResources().getStringArray(R.array.week1day3level3);}
+    		}
+    	}
+    	
+    	
+    	switch (id) {
         case DIALOG_1:
         	return new AlertDialog.Builder(GoTraining.this)
             //.setIcon(R.drawable.light)
-            .setTitle(R.string.Training1)
-            .setMessage("")
+            //.setTitle(R.string.Training1)
+        	.setMessage(getText(R.string.Training1)+" "+cPlan[0])
             .setPositiveButton(R.string.Ok, new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int whichButton) {
                 	showDialog(DIALOG_REST);
+                }
+            })		
+            .create();
+        case DIALOG_2:
+        	return new AlertDialog.Builder(GoTraining.this)
+            
+        	.setMessage(getText(R.string.Training2)+" "+cPlan[1])
+            .setPositiveButton(R.string.Ok, new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int whichButton) {
+                	showDialog(DIALOG_REST);
+                }
+            })		
+            .create();
+        case DIALOG_3:
+        	return new AlertDialog.Builder(GoTraining.this)
+            
+        	.setMessage(getText(R.string.Training3)+" "+cPlan[2])
+            .setPositiveButton(R.string.Ok, new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int whichButton) {
+                	showDialog(DIALOG_REST);
+                }
+            })		
+            .create();
+        case DIALOG_4:
+        	return new AlertDialog.Builder(GoTraining.this)
+            
+        	.setMessage(getText(R.string.Training4)+" "+cPlan[3])
+            .setPositiveButton(R.string.Ok, new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int whichButton) {
+                	showDialog(DIALOG_REST);
+                }
+            })		
+            .create();
+        case DIALOG_5:
+        	return new AlertDialog.Builder(GoTraining.this)
+           
+        	.setMessage(getText(R.string.Training5)+" "+cPlan[4])
+            .setPositiveButton(R.string.Ok, new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int whichButton) {
+                	//showDialog(DIALOG_REST);
                 }
             })		
             .create();
@@ -92,22 +169,24 @@ mFirstRunOk.setOnClickListener(this);
         case DIALOG_REST:
         	Dialog dialog = new Dialog(this);
         	dialog.setContentView(R.layout.timer);
-        	dialog.setTitle("Rest Time!");
-        	final TextView tv1 = (TextView) dialog.findViewById(R.id.TimerText);
+        	dialog.setTitle(R.string.Rest);
+        	final TextView tv11 = (TextView) dialog.findViewById(R.id.TimerText);
             new CountDownTimer(restTime, 1000) {
                 public void onTick(long millisUntilFinished) {
-                    tv1.setText("seconds remaining: " + millisUntilFinished / 1000);
+                    tv11.setText(" "+millisUntilFinished / 1000+" ");
                 }
                 public void onFinish() {
-                showDialog(DIALOG_1);
-                removeDialog(5);
-                //dismissDialog(5);
+                //showDialog(DIALOG_1);
+                removeDialog(6);
+                //dismissDialog(6);
                 }
              }.start(); 
          	return dialog;
 		}
 		return null;
 	}	
+
+
 	
 	public void onClick(View v)
     {
