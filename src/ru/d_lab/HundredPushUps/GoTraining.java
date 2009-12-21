@@ -19,7 +19,11 @@ public class GoTraining extends Activity implements OnClickListener {
 	private static final int DIALOG_3 = 3;
 	private static final int DIALOG_4 = 4;
 	private static final int DIALOG_5 = 5;
-	private static final int DIALOG_REST=6;
+	private static final int DIALOG_REST_1=6;
+	private static final int DIALOG_REST_2=7;
+	private static final int DIALOG_REST_3=8;
+	private static final int DIALOG_REST_4=9;
+	private static final int DIALOG_SAVE = 10;
 	
 	@Override
 public void onCreate(Bundle savedInstanceState)
@@ -84,15 +88,9 @@ mFirstRunOk.setOnClickListener(this);
         restTime = (restTime+1)*1000;
         int trainingWeek = settings.getInt("TrainingWeek", 1);
     	int trainingDay = settings.getInt("TrainingDay", 1);
-    	int trainingLevel = settings.getInt("TrainingLevel", 0);
-    	
-//   	TextView tv1 = (TextView) findViewById(R.id.Trainig1);
-//    	TextView tv2 = (TextView) findViewById(R.id.Trainig2);
-//    	TextView tv3 = (TextView) findViewById(R.id.Trainig3);
-//    	TextView tv4 = (TextView) findViewById(R.id.Trainig4);
-//    	TextView tv5 = (TextView) findViewById(R.id.Trainig5); 
-    	
+    	int trainingLevel = settings.getInt("TrainingLevel", 0);    	
     	String[] cPlan = null;
+    	
     	//int podhod=0;
     	if (trainingWeek==1){
     		if (trainingDay==1){
@@ -116,73 +114,138 @@ mFirstRunOk.setOnClickListener(this);
     	switch (id) {
         case DIALOG_1:
         	return new AlertDialog.Builder(GoTraining.this)
-            //.setIcon(R.drawable.light)
-            //.setTitle(R.string.Training1)
-        	.setMessage(getText(R.string.Training1)+" "+cPlan[0])
-            .setPositiveButton(R.string.Ok, new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int whichButton) {
-                	showDialog(DIALOG_REST);
+        	.setIcon(R.drawable.light)
+            .setTitle(R.string.Training1)        	
+        	.setMessage(getText(R.string.TrainigNum)+" "+cPlan[0])
+            .setPositiveButton(R.string.dialog_Next, new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int whichButton) {               	
+                	showDialog(DIALOG_REST_1);
                 }
             })		
             .create();
         case DIALOG_2:
         	return new AlertDialog.Builder(GoTraining.this)
-            
-        	.setMessage(getText(R.string.Training2)+" "+cPlan[1])
-            .setPositiveButton(R.string.Ok, new DialogInterface.OnClickListener() {
+        	.setIcon(R.drawable.light)
+            .setTitle(R.string.Training2)
+        	.setMessage(getText(R.string.TrainigNum)+" "+cPlan[1])
+            .setPositiveButton(R.string.dialog_Next, new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int whichButton) {
-                	showDialog(DIALOG_REST);
+                	showDialog(DIALOG_REST_2);
                 }
             })		
             .create();
         case DIALOG_3:
         	return new AlertDialog.Builder(GoTraining.this)
-            
-        	.setMessage(getText(R.string.Training3)+" "+cPlan[2])
-            .setPositiveButton(R.string.Ok, new DialogInterface.OnClickListener() {
+        	.setIcon(R.drawable.light)
+            .setTitle(R.string.Training3)
+        	.setMessage(getText(R.string.TrainigNum)+" "+cPlan[2])
+            .setPositiveButton(R.string.dialog_Next, new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int whichButton) {
-                	showDialog(DIALOG_REST);
+                	showDialog(DIALOG_REST_3);
                 }
             })		
             .create();
         case DIALOG_4:
         	return new AlertDialog.Builder(GoTraining.this)
-            
-        	.setMessage(getText(R.string.Training4)+" "+cPlan[3])
-            .setPositiveButton(R.string.Ok, new DialogInterface.OnClickListener() {
+        	.setIcon(R.drawable.light)
+            .setTitle(R.string.Training4)
+        	.setMessage(getText(R.string.TrainigNum)+" "+cPlan[3])
+            .setPositiveButton(R.string.dialog_Next, new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int whichButton) {
-                	showDialog(DIALOG_REST);
+                	showDialog(DIALOG_REST_4);
                 }
             })		
             .create();
         case DIALOG_5:
         	return new AlertDialog.Builder(GoTraining.this)
-           
-        	.setMessage(getText(R.string.Training5)+" "+cPlan[4])
-            .setPositiveButton(R.string.Ok, new DialogInterface.OnClickListener() {
+        	.setIcon(R.drawable.light)
+            .setTitle(R.string.Training5)
+        	.setMessage(getText(R.string.TrainigNum)+" "+cPlan[4])
+            .setPositiveButton(R.string.dialog_Next, new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int whichButton) {
                 	//showDialog(DIALOG_REST);
                 }
             })		
             .create();
         
-        case DIALOG_REST:
-        	Dialog dialog = new Dialog(this);
-        	dialog.setContentView(R.layout.timer);
-        	dialog.setTitle(R.string.Rest);
-        	final TextView tv11 = (TextView) dialog.findViewById(R.id.TimerText);
+        case DIALOG_REST_1:
+        	Dialog dialog1 = new Dialog(this);
+        	dialog1.setContentView(R.layout.timer);
+        	dialog1.setTitle(R.string.Rest);
+        	final TextView tv11 = (TextView) dialog1.findViewById(R.id.TimerText);
             new CountDownTimer(restTime, 1000) {
                 public void onTick(long millisUntilFinished) {
                     tv11.setText(" "+millisUntilFinished / 1000+" ");
                 }
                 public void onFinish() {
-                //showDialog(DIALOG_1);
+                showDialog(DIALOG_2);
                 removeDialog(6);
                 //dismissDialog(6);
                 }
              }.start(); 
-         	return dialog;
-		}
+         	return dialog1;
+         	
+        case DIALOG_REST_2:
+        	Dialog dialog2 = new Dialog(this);
+        	dialog2.setContentView(R.layout.timer);
+        	dialog2.setTitle(R.string.Rest);
+        	final TextView tv12 = (TextView) dialog2.findViewById(R.id.TimerText);
+            new CountDownTimer(restTime, 1000) {
+                public void onTick(long millisUntilFinished) {
+                    tv12.setText(" "+millisUntilFinished / 1000+" ");
+                }
+                public void onFinish() {
+                showDialog(DIALOG_3);
+                removeDialog(7);
+                }
+             }.start(); 
+         	return dialog2;
+         	
+        case DIALOG_REST_3:
+        	Dialog dialog3 = new Dialog(this);
+        	dialog3.setContentView(R.layout.timer);
+        	dialog3.setTitle(R.string.Rest);
+        	final TextView tv13 = (TextView) dialog3.findViewById(R.id.TimerText);
+            new CountDownTimer(restTime, 1000) {
+                public void onTick(long millisUntilFinished) {
+                    tv13.setText(" "+millisUntilFinished / 1000+" ");
+                }
+                public void onFinish() {
+                showDialog(DIALOG_4);
+                removeDialog(8);
+                }
+             }.start(); 
+         	return dialog3;
+
+        case DIALOG_REST_4:
+        	Dialog dialog4 = new Dialog(this);
+        	dialog4.setContentView(R.layout.timer);
+        	dialog4.setTitle(R.string.Rest);
+        	final TextView tv14 = (TextView) dialog4.findViewById(R.id.TimerText);
+            new CountDownTimer(restTime, 1000) {
+                public void onTick(long millisUntilFinished) {
+                    tv14.setText(" "+millisUntilFinished / 1000+" ");
+                }
+                public void onFinish() {
+                showDialog(DIALOG_5);
+                removeDialog(9);
+                }
+             }.start(); 
+         	return dialog4;
+         	//finish
+        case DIALOG_SAVE:
+        	return new AlertDialog.Builder(GoTraining.this)
+        	.setIcon(R.drawable.light)
+            .setTitle(R.string.Training5)
+        	.setMessage(getText(R.string.TrainigNum)+" "+cPlan[4])
+            .setView(getCurrentFocus())
+        	.setPositiveButton(R.string.dialog_Next, new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int whichButton) {
+                	//showDialog(DIALOG_REST);
+                }
+            })		
+            .create();   	
+    	}
 		return null;
 	}	
 

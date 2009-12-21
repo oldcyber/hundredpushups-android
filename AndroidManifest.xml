@@ -32,15 +32,7 @@
 					<action android:name="android.intent.action.MAIN" />
 					<category android:name="android.intent.category.CONFIGURATION" />
 				</intent-filter>
-		</activity>
-			
-		<activity android:name=".Timer">
-				<intent-filter>
-					<action android:name="android.intent.action.MAIN" />
-					<category android:name="android.intent.category.SAMPLE_CODE" />
-				</intent-filter>
-		</activity>
-		
+		</activity>		
 		<!-- Preferences Samples -->
 		<activity android:name=".PreferencesXml" android:label="@string/main_preferences">
             <intent-filter>

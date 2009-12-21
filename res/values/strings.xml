@@ -11,6 +11,7 @@
     <string name="dialog_Cancel">Отменить</string>
     <string name="dialog_Other">Что-то</string>
     <string name="dialog_Save">Сохранить</string>
+    <string name="dialog_Next">Далее</string>
     <!-- mainbuttons -->
     <string name="MainButton">Начать тестирование</string>
     <string name="ConfigurationButton">Настройка</string>
@@ -59,6 +60,7 @@
 	<string name="Training5">Подход 5:</string>	
 	<string name="TrainingMax">не менее</string>
 	<string name="Rest">Отдых</string>
+	<string name="TrainigNum">Количество отжиманий:</string>
 	<!-- Configuration -->
 	<string name="ResetButton">Сбросить всё!</string>
 	<string name="ResetFirstInitButton">Повторить начальный тест</string>
