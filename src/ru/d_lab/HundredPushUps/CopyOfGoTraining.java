@@ -13,7 +13,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class GoTraining extends Activity implements OnClickListener {
+public class CopyOfGoTraining extends Activity implements OnClickListener {
 	/** Called when the activity is first created. */
 	private static final int DIALOG_1 = 1;
 	private static final int DIALOG_2 = 2;
@@ -27,7 +27,7 @@ public class GoTraining extends Activity implements OnClickListener {
 	private static final int DIALOG_SAVE = 10;
 	
 	@Override
-	public void onCreate(Bundle savedInstanceState)
+public void onCreate(Bundle savedInstanceState)
 {
 super.onCreate(savedInstanceState);
 setContentView(R.layout.training);
@@ -74,11 +74,14 @@ tv5.setText("max ("+getText(R.string.TrainingMax)+" "+cPlan[4]+")");
 
 Button mFirstRunOk = (Button)findViewById(R.id.BeginTraining);
 mFirstRunOk.setOnClickListener(this);
+
+
+
 }
 
 	@Override
 
-	public Dialog onCreateDialog(int id) {
+	protected Dialog onCreateDialog(int id) {
 		
 		SharedPreferences settings = getSharedPreferences("FileSettings", 0);
         long restTime = settings.getLong("RestTime", 10);
@@ -115,7 +118,7 @@ mFirstRunOk.setOnClickListener(this);
 
             LayoutInflater factory = LayoutInflater.from(this); 
             final View textEntryView = factory.inflate(R.layout.gotraining, null); 
-            return new AlertDialog.Builder(GoTraining.this) 
+            return new AlertDialog.Builder(CopyOfGoTraining.this) 
                 .setIcon(R.drawable.light) 
                 .setTitle(R.string.Training1) 
                 .setView(textEntryView) 
@@ -129,7 +132,7 @@ mFirstRunOk.setOnClickListener(this);
                 .create(); 
          	
         case DIALOG_2:
-        	return new AlertDialog.Builder(GoTraining.this)
+        	return new AlertDialog.Builder(CopyOfGoTraining.this)
         	.setIcon(R.drawable.light)
             .setTitle(R.string.Training2)
         	.setMessage(getText(R.string.TrainigNum)+" "+cPlan[1])
@@ -140,7 +143,7 @@ mFirstRunOk.setOnClickListener(this);
             })		
             .create();
         case DIALOG_3:
-        	return new AlertDialog.Builder(GoTraining.this)
+        	return new AlertDialog.Builder(CopyOfGoTraining.this)
         	.setIcon(R.drawable.light)
             .setTitle(R.string.Training3)
         	.setMessage(getText(R.string.TrainigNum)+" "+cPlan[2])
@@ -151,7 +154,7 @@ mFirstRunOk.setOnClickListener(this);
             })		
             .create();
         case DIALOG_4:
-        	return new AlertDialog.Builder(GoTraining.this)
+        	return new AlertDialog.Builder(CopyOfGoTraining.this)
         	.setIcon(R.drawable.light)
             .setTitle(R.string.Training4)
         	.setMessage(getText(R.string.TrainigNum)+" "+cPlan[3])
@@ -162,7 +165,7 @@ mFirstRunOk.setOnClickListener(this);
             })		
             .create();
         case DIALOG_5:
-        	return new AlertDialog.Builder(GoTraining.this)
+        	return new AlertDialog.Builder(CopyOfGoTraining.this)
         	.setIcon(R.drawable.light)
             .setTitle(R.string.Training5)
         	.setMessage(getText(R.string.TrainigNum)+" "+cPlan[4])
@@ -239,7 +242,7 @@ mFirstRunOk.setOnClickListener(this);
          	return dialog4;
          	//finish
         case DIALOG_SAVE:
-        	return new AlertDialog.Builder(GoTraining.this)
+        	return new AlertDialog.Builder(CopyOfGoTraining.this)
         	.setIcon(R.drawable.light)
             .setTitle(R.string.Training5)
         	.setMessage(getText(R.string.TrainigNum)+" "+cPlan[4])

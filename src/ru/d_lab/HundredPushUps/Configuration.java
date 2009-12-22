@@ -17,11 +17,6 @@ public void onCreate(Bundle savedInstanceState)
 super.onCreate(savedInstanceState);
 setContentView(R.layout.configuration);
 
-//SharedPreferences settings = getSharedPreferences("FileSettings", 0);
-//int restTime = settings.getInt("RestTime", 10);
-//EditText tv1 = (EditText) findViewById(R.id.RestTime);
-//tv1.setText("10");
-
 Button mResetButton = (Button)findViewById(R.id.ResetButton);
 mResetButton.setOnClickListener(this);
 
@@ -35,12 +30,6 @@ Button mGoDayButton = (Button)findViewById(R.id.GoDayButton);
 mGoDayButton.setOnClickListener(this);
 
 }
-	/*
-	private String valueOf(long restTime) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	*/
 	
 	public void onClick(View v)
     {
