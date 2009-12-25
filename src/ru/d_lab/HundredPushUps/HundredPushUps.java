@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -20,6 +21,9 @@ public class HundredPushUps extends Activity implements OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
  
+        int mInt=0;
+        String LOG_TAG = null;
+		Log.v(LOG_TAG, "mInt value: "+mInt);
         //Load application preferences
         SharedPreferences settings = getSharedPreferences("FileSettings", 0);
         boolean firstRun = settings.getBoolean("FirstRun", true);

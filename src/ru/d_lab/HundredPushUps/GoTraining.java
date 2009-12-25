@@ -1,5 +1,6 @@
 package ru.d_lab.HundredPushUps;
 
+import ru.d_lab.HundredPushUps.tools.MakePlan;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -25,7 +26,7 @@ public class GoTraining extends Activity implements OnClickListener {
 	private static final int DIALOG_REST_3=8;
 	private static final int DIALOG_REST_4=9;
 	private static final int DIALOG_SAVE = 10;
-	
+	// Welcome training screen
 	@Override
 	public void onCreate(Bundle savedInstanceState)
 {
@@ -43,28 +44,9 @@ TextView tv2 = (TextView) findViewById(R.id.Trainig2);
 TextView tv3 = (TextView) findViewById(R.id.Trainig3);
 TextView tv4 = (TextView) findViewById(R.id.Trainig4);
 TextView tv5 = (TextView) findViewById(R.id.Trainig5); 
-String[] cPlan = null;
 
-//trainingLevel = 1;
-if (trainingWeek==1){
-	if (trainingDay==1){
-		if (trainingLevel==1){cPlan = this.getResources().getStringArray(R.array.week1day1level1);}
-		else if (trainingLevel==2){cPlan = this.getResources().getStringArray(R.array.week1day1level2);}
-		else {cPlan = this.getResources().getStringArray(R.array.week1day1level3);}
-	}
-	else if (trainingDay==2){
-		if (trainingLevel==1){cPlan = this.getResources().getStringArray(R.array.week1day2level1);}
-		else if (trainingLevel==2){cPlan = this.getResources().getStringArray(R.array.week1day2level2);}
-		else {cPlan = this.getResources().getStringArray(R.array.week1day2level3);}
-	}
-	else if(trainingDay==3){
-		if (trainingLevel==1){cPlan = this.getResources().getStringArray(R.array.week1day3level1);}
-		else if (trainingLevel==2){cPlan = this.getResources().getStringArray(R.array.week1day3level2);}
-		else {cPlan = this.getResources().getStringArray(R.array.week1day3level3);}
-	
-	}
-
-}
+MakePlan WeekPlan = new MakePlan(trainingLevel, trainingDay, trainingWeek);
+String[] cPlan = WeekPlan.gettTrainingPlan(this);
 
 tv1.setText(cPlan[0]);
 tv2.setText(cPlan[1]);
@@ -75,7 +57,7 @@ tv5.setText("max ("+getText(R.string.TrainingMax)+" "+cPlan[4]+")");
 Button mFirstRunOk = (Button)findViewById(R.id.BeginTraining);
 mFirstRunOk.setOnClickListener(this);
 }
-
+	// Training windows
 	@Override
 
 	public Dialog onCreateDialog(int id) {
@@ -86,11 +68,11 @@ mFirstRunOk.setOnClickListener(this);
         int trainingWeek = settings.getInt("TrainingWeek", 1);
     	int trainingDay = settings.getInt("TrainingDay", 1);
     	int trainingLevel = settings.getInt("TrainingLevel", 0);    	
-    	String[] cPlan = null;
     	
-    	Button mdialog_Next1 = (Button)findViewById(R.id.BeginTraining);
-    	mdialog_Next1.setOnClickListener(this);
+    	MakePlan WeekPlan = new MakePlan(trainingLevel, trainingDay, trainingWeek);
+    	String[] cPlan = WeekPlan.gettTrainingPlan(this);
     	
+    	/*
     	if (trainingWeek==1){
     		if (trainingDay==1){
     			if (trainingLevel==1){cPlan = this.getResources().getStringArray(R.array.week1day1level1);}
@@ -108,7 +90,7 @@ mFirstRunOk.setOnClickListener(this);
     			else {cPlan = this.getResources().getStringArray(R.array.week1day3level3);}
     		}
     	}
-    	
+*/    	
     	
     	switch (id) {
         case DIALOG_1:
@@ -253,11 +235,7 @@ mFirstRunOk.setOnClickListener(this);
     	}
 		return null;
 	}	
-	
-	
-
-
-	
+	// Button Listener	
 	public void onClick(View v)
     {
 		switch (v.getId())
