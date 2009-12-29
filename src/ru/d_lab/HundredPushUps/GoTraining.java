@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.TableRow;
 import android.widget.TextView;
 
 public class GoTraining extends Activity implements OnClickListener {
@@ -21,10 +22,18 @@ public class GoTraining extends Activity implements OnClickListener {
 	private static final int DIALOG_3 = 3;
 	private static final int DIALOG_4 = 4;
 	private static final int DIALOG_5 = 5;
+	private static final int DIALOG_6 = 11;
+	private static final int DIALOG_7 = 12;
+	private static final int DIALOG_8 = 13;
+	private static final int DIALOG_9 = 14;
 	private static final int DIALOG_REST_1=6;
 	private static final int DIALOG_REST_2=7;
 	private static final int DIALOG_REST_3=8;
 	private static final int DIALOG_REST_4=9;
+	private static final int DIALOG_REST_5=15;
+	private static final int DIALOG_REST_6=16;
+	private static final int DIALOG_REST_7=17;
+	private static final int DIALOG_REST_8=18;
 	private static final int DIALOG_SAVE = 10;
 	// Welcome training screen
 	@Override
@@ -39,20 +48,120 @@ SharedPreferences settings = getSharedPreferences("FileSettings", 0);
 int trainingWeek = settings.getInt("TrainingWeek", 1);
 int trainingDay = settings.getInt("TrainingDay", 1);
 int trainingLevel = settings.getInt("TrainingLevel", 0);
-TextView tv1 = (TextView) findViewById(R.id.Trainig1);
-TextView tv2 = (TextView) findViewById(R.id.Trainig2);
-TextView tv3 = (TextView) findViewById(R.id.Trainig3);
-TextView tv4 = (TextView) findViewById(R.id.Trainig4);
-TextView tv5 = (TextView) findViewById(R.id.Trainig5); 
 
-MakePlan WeekPlan = new MakePlan(trainingLevel, trainingDay, trainingWeek);
-String[] cPlan = WeekPlan.gettTrainingPlan(this);
+if (trainingWeek < 5){
+	TextView tv1 = (TextView) findViewById(R.id.Trainig1);
+	TextView tv2 = (TextView) findViewById(R.id.Trainig2);
+	TextView tv3 = (TextView) findViewById(R.id.Trainig3);
+	TextView tv4 = (TextView) findViewById(R.id.Trainig4);
+	TextView tv5 = (TextView) findViewById(R.id.Trainig5);
 
-tv1.setText(cPlan[0]);
-tv2.setText(cPlan[1]);
-tv3.setText(cPlan[2]);
-tv4.setText(cPlan[3]);
-tv5.setText("max ("+getText(R.string.TrainingMax)+" "+cPlan[4]+")");
+	MakePlan WeekPlan = new MakePlan(trainingLevel, trainingDay, trainingWeek);
+	String[] cPlan = WeekPlan.gettTrainingPlan(this);
+		
+	tv1.setText(cPlan[0]);
+	tv2.setText(cPlan[1]);
+	tv3.setText(cPlan[2]);
+	tv4.setText(cPlan[3]);
+	tv5.setText("max ("+getText(R.string.TrainingMax)+" "+cPlan[4]+")");
+}
+else if (trainingWeek ==5 ){
+	if (trainingDay == 1){
+		TextView tv1 = (TextView) findViewById(R.id.Trainig1);
+		TextView tv2 = (TextView) findViewById(R.id.Trainig2);
+		TextView tv3 = (TextView) findViewById(R.id.Trainig3);
+		TextView tv4 = (TextView) findViewById(R.id.Trainig4);
+		TextView tv5 = (TextView) findViewById(R.id.Trainig5);
+
+		MakePlan WeekPlan = new MakePlan(trainingLevel, trainingDay, trainingWeek);
+		String[] cPlan = WeekPlan.gettTrainingPlan(this);
+
+		tv1.setText(cPlan[0]);
+		tv2.setText(cPlan[1]);
+		tv3.setText(cPlan[2]);
+		tv4.setText(cPlan[3]);
+		tv5.setText("max ("+getText(R.string.TrainingMax)+" "+cPlan[4]+")");	
+	}
+	else {
+	TextView tv1 = (TextView) findViewById(R.id.Trainig1);
+	TextView tv2 = (TextView) findViewById(R.id.Trainig2);
+	TextView tv3 = (TextView) findViewById(R.id.Trainig3);
+	TextView tv4 = (TextView) findViewById(R.id.Trainig4);
+	TextView tv5 = (TextView) findViewById(R.id.Trainig5);
+	TextView tv6 = (TextView) findViewById(R.id.Trainig6);
+	TextView tv7 = (TextView) findViewById(R.id.Trainig7);
+	
+	MakePlan WeekPlan = new MakePlan(trainingLevel, trainingDay, trainingWeek);
+	String[] cPlan = WeekPlan.gettTrainingPlan(this);
+		
+	TableRow rec6 = (TableRow)findViewById(R.id.TTrainig6);
+	rec6.setVisibility(View.VISIBLE);
+	TableRow rec7 = (TableRow)findViewById(R.id.TTrainig6);
+	rec7.setVisibility(View.VISIBLE);
+		
+	tv1.setText(cPlan[0]);
+	tv2.setText(cPlan[1]);
+	tv3.setText(cPlan[2]);
+	tv4.setText(cPlan[3]);
+	tv5.setText(cPlan[4]);
+	tv6.setText(cPlan[5]);
+	tv7.setText("max ("+getText(R.string.TrainingMax)+" "+cPlan[6]+")");
+	}
+}
+	
+else if (trainingWeek == 6){
+	if (trainingDay == 1){
+	TextView tv1 = (TextView) findViewById(R.id.Trainig1);
+	TextView tv2 = (TextView) findViewById(R.id.Trainig2);
+	TextView tv3 = (TextView) findViewById(R.id.Trainig3);
+	TextView tv4 = (TextView) findViewById(R.id.Trainig4);
+	TextView tv5 = (TextView) findViewById(R.id.Trainig5);
+
+	MakePlan WeekPlan = new MakePlan(trainingLevel, trainingDay, trainingWeek);
+	String[] cPlan = WeekPlan.gettTrainingPlan(this);
+
+	tv1.setText(cPlan[0]);
+	tv2.setText(cPlan[1]);
+	tv3.setText(cPlan[2]);
+	tv4.setText(cPlan[3]);
+	tv5.setText("max ("+getText(R.string.TrainingMax)+" "+cPlan[4]+")");
+	}
+	else {
+		TextView tv1 = (TextView) findViewById(R.id.Trainig1);
+		TextView tv2 = (TextView) findViewById(R.id.Trainig2);
+		TextView tv3 = (TextView) findViewById(R.id.Trainig3);
+		TextView tv4 = (TextView) findViewById(R.id.Trainig4);
+		TextView tv5 = (TextView) findViewById(R.id.Trainig5);
+		TextView tv6 = (TextView) findViewById(R.id.Trainig6);
+		TextView tv7 = (TextView) findViewById(R.id.Trainig7);
+		TextView tv8 = (TextView) findViewById(R.id.Trainig8);
+		TextView tv9 = (TextView) findViewById(R.id.Trainig9);
+		
+		MakePlan WeekPlan = new MakePlan(trainingLevel, trainingDay, trainingWeek);
+		String[] cPlan = WeekPlan.gettTrainingPlan(this);
+
+		TableRow rec6 = (TableRow)findViewById(R.id.TTrainig6);
+		rec6.setVisibility(View.VISIBLE);
+		TableRow rec7 = (TableRow)findViewById(R.id.TTrainig6);
+		rec7.setVisibility(View.VISIBLE);
+		TableRow rec8 = (TableRow)findViewById(R.id.TTrainig6);
+		rec8.setVisibility(View.VISIBLE);
+		TableRow rec9 = (TableRow)findViewById(R.id.TTrainig6);
+		rec9.setVisibility(View.VISIBLE);
+		
+		tv1.setText(cPlan[0]);
+		tv2.setText(cPlan[1]);
+		tv3.setText(cPlan[2]);
+		tv4.setText(cPlan[3]);
+		tv5.setText(cPlan[4]);
+		tv6.setText(cPlan[5]);
+		tv7.setText(cPlan[6]);
+		tv8.setText(cPlan[7]);
+		tv9.setText("max ("+getText(R.string.TrainingMax)+" "+cPlan[8]+")");		
+	}
+}
+
+
 
 Button mFirstRunOk = (Button)findViewById(R.id.BeginTraining);
 mFirstRunOk.setOnClickListener(this);
@@ -70,39 +179,19 @@ mFirstRunOk.setOnClickListener(this);
     	int trainingLevel = settings.getInt("TrainingLevel", 0);    	
     	
     	MakePlan WeekPlan = new MakePlan(trainingLevel, trainingDay, trainingWeek);
-    	String[] cPlan = WeekPlan.gettTrainingPlan(this);
-    	
-    	/*
-    	if (trainingWeek==1){
-    		if (trainingDay==1){
-    			if (trainingLevel==1){cPlan = this.getResources().getStringArray(R.array.week1day1level1);}
-    			else if (trainingLevel==2){cPlan = this.getResources().getStringArray(R.array.week1day1level2);}
-    			else {cPlan = this.getResources().getStringArray(R.array.week1day1level3);}
-    		}
-    		else if (trainingDay==2){
-    			if (trainingLevel==1){cPlan = this.getResources().getStringArray(R.array.week1day2level1);}
-    			else if (trainingLevel==2){cPlan = this.getResources().getStringArray(R.array.week1day2level2);}
-    			else {cPlan = this.getResources().getStringArray(R.array.week1day2level3);}
-    		}
-    		else if(trainingDay==3){
-    			if (trainingLevel==1){cPlan = this.getResources().getStringArray(R.array.week1day3level1);}
-    			else if (trainingLevel==2){cPlan = this.getResources().getStringArray(R.array.week1day3level2);}
-    			else {cPlan = this.getResources().getStringArray(R.array.week1day3level3);}
-    		}
-    	}
-*/    	
+    	String[] cPlan = WeekPlan.gettTrainingPlan(this);  	
     	
     	switch (id) {
         case DIALOG_1:
-
-            LayoutInflater factory = LayoutInflater.from(this); 
-            final View textEntryView = factory.inflate(R.layout.gotraining, null); 
+        	
+            LayoutInflater factory1 = LayoutInflater.from(this); 
+            final View textEntryView1 = factory1.inflate(R.layout.gotraining, null); 
+            TextView tv21 = (TextView) textEntryView1.findViewById(R.id.goTrainingText);
+            tv21.setText(cPlan[0]);
             return new AlertDialog.Builder(GoTraining.this) 
                 .setIcon(R.drawable.light) 
                 .setTitle(R.string.Training1) 
-                .setView(textEntryView) 
-
-                //.setMessage(getText(R.string.TrainigNum)+" "+cPlan[0])
+                .setView(textEntryView1)
                 .setPositiveButton(R.string.dialog_Next, new DialogInterface.OnClickListener() { 
                     public void onClick(DialogInterface dialog, int whichButton) { 
                     	showDialog(DIALOG_REST_1);
@@ -111,49 +200,68 @@ mFirstRunOk.setOnClickListener(this);
                 .create(); 
          	
         case DIALOG_2:
-        	return new AlertDialog.Builder(GoTraining.this)
-        	.setIcon(R.drawable.light)
-            .setTitle(R.string.Training2)
-        	.setMessage(getText(R.string.TrainigNum)+" "+cPlan[1])
-            .setPositiveButton(R.string.dialog_Next, new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int whichButton) {
-                	showDialog(DIALOG_REST_2);
-                }
-            })		
-            .create();
+        	LayoutInflater factory2 = LayoutInflater.from(this); 
+            final View textEntryView2 = factory2.inflate(R.layout.gotraining, null); 
+            TextView tv22 = (TextView) textEntryView2.findViewById(R.id.goTrainingText);
+            tv22.setText(cPlan[1]);
+            return new AlertDialog.Builder(GoTraining.this) 
+                .setIcon(R.drawable.light) 
+                .setTitle(R.string.Training2) 
+                .setView(textEntryView2)
+                .setPositiveButton(R.string.dialog_Next, new DialogInterface.OnClickListener() { 
+                    public void onClick(DialogInterface dialog, int whichButton) { 
+                    	showDialog(DIALOG_REST_2);
+                    } 
+                })  
+                .create(); 
+
         case DIALOG_3:
-        	return new AlertDialog.Builder(GoTraining.this)
-        	.setIcon(R.drawable.light)
-            .setTitle(R.string.Training3)
-        	.setMessage(getText(R.string.TrainigNum)+" "+cPlan[2])
-            .setPositiveButton(R.string.dialog_Next, new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int whichButton) {
-                	showDialog(DIALOG_REST_3);
-                }
-            })		
-            .create();
+        	LayoutInflater factory3 = LayoutInflater.from(this); 
+            final View textEntryView3 = factory3.inflate(R.layout.gotraining, null); 
+            TextView tv23 = (TextView) textEntryView3.findViewById(R.id.goTrainingText);
+            tv23.setText(cPlan[2]);
+            return new AlertDialog.Builder(GoTraining.this) 
+                .setIcon(R.drawable.light) 
+                .setTitle(R.string.Training3) 
+                .setView(textEntryView3)
+                .setPositiveButton(R.string.dialog_Next, new DialogInterface.OnClickListener() { 
+                    public void onClick(DialogInterface dialog, int whichButton) { 
+                    	showDialog(DIALOG_REST_3);
+                    } 
+                })  
+                .create(); 
+            
         case DIALOG_4:
-        	return new AlertDialog.Builder(GoTraining.this)
-        	.setIcon(R.drawable.light)
-            .setTitle(R.string.Training4)
-        	.setMessage(getText(R.string.TrainigNum)+" "+cPlan[3])
-            .setPositiveButton(R.string.dialog_Next, new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int whichButton) {
-                	showDialog(DIALOG_REST_4);
-                }
-            })		
-            .create();
+        	LayoutInflater factory4 = LayoutInflater.from(this); 
+            final View textEntryView4 = factory4.inflate(R.layout.gotraining, null); 
+            TextView tv24 = (TextView) textEntryView4.findViewById(R.id.goTrainingText);
+            tv24.setText(cPlan[3]);
+            return new AlertDialog.Builder(GoTraining.this) 
+                .setIcon(R.drawable.light) 
+                .setTitle(R.string.Training4) 
+                .setView(textEntryView4)
+                .setPositiveButton(R.string.dialog_Next, new DialogInterface.OnClickListener() { 
+                    public void onClick(DialogInterface dialog, int whichButton) { 
+                    	showDialog(DIALOG_REST_4);
+                    } 
+                })  
+                .create(); 
+            
         case DIALOG_5:
-        	return new AlertDialog.Builder(GoTraining.this)
-        	.setIcon(R.drawable.light)
-            .setTitle(R.string.Training5)
-        	.setMessage(getText(R.string.TrainigNum)+" "+cPlan[4])
-            .setPositiveButton(R.string.dialog_Next, new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int whichButton) {
-                	//showDialog(DIALOG_REST);
-                }
-            })		
-            .create();
+        	LayoutInflater factory5 = LayoutInflater.from(this); 
+            final View textEntryView5 = factory5.inflate(R.layout.gotraining, null); 
+            TextView tv25 = (TextView) textEntryView5.findViewById(R.id.goTrainingText);
+            tv25.setText(cPlan[4]);
+            return new AlertDialog.Builder(GoTraining.this) 
+                .setIcon(R.drawable.light) 
+                .setTitle(R.string.Training5) 
+                .setView(textEntryView5)
+                .setPositiveButton(R.string.dialog_Next, new DialogInterface.OnClickListener() { 
+                    public void onClick(DialogInterface dialog, int whichButton) { 
+                    	//showDialog(DIALOG_REST_2);
+                    } 
+                })  
+                .create(); 
         
         case DIALOG_REST_1:
         	Dialog dialog1 = new Dialog(this);

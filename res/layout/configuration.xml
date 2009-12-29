@@ -23,12 +23,12 @@ android:layout_height="wrap_content">
 		android:gravity="center"
 		android:textColor="#000000"
 		android:id="@+id/RestTime" 
-		android:text=""
+		android:text="60"
 		android:selectAllOnFocus="true"  
 		android:layout_width="wrap_content" 
 		android:layout_height="wrap_content" 
 		android:layout_margin="3dip" 
-		android:hint="Ooops"/>	
+		/>	
 		<Button
 		android:text="@string/dialog_Save" 
 		android:id="@+id/SaveData"  

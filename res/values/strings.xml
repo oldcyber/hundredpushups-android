@@ -58,6 +58,10 @@
 	<string name="Training3">Подход 3:</string>
 	<string name="Training4">Подход 4:</string>
 	<string name="Training5">Подход 5:</string>	
+	<string name="Training6">Подход 6:</string>
+	<string name="Training7">Подход 7:</string>
+	<string name="Training8">Подход 8:</string>
+	<string name="Training9">Подход 9:</string>
 	<string name="TrainingMax">не менее</string>
 	<string name="Rest">Отдых</string>
 	<string name="TrainigNum">Количество отжиманий:</string>
@@ -66,6 +70,8 @@
 	<string name="ResetFirstInitButton">Повторить начальный тест</string>
 	<string name="GoDayButton">Перейти к занятию</string>
 	<string name="RestTimeText">Время отдыха (в сек.)</string>
+	<string name="dialog_training_preferences">Свойства занятий</string>
+	<string name="week1">Неделя 1</string>
 	<!--  Preferences -->
 	<string name="main_preferences">Основные настройки</string>
 	<string name="GoDayButtonSummary">Перейти к нужному дню или неделе</string>

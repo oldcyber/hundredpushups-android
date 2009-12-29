@@ -118,6 +118,86 @@ android:layout_height="wrap_content">
 		android:layout_width="wrap_content" 
 		android:layout_height="wrap_content" />
 </TableRow>
+<TableRow 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" 
+android:visibility="gone"
+android:id="@+id/TTrainig6">
+	<TextView 
+		android:padding="3dip"
+		android:textColor="#000000"
+		android:text="@string/Training6" 
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content" />
+	<TextView 
+		android:gravity="center"
+		android:textStyle="bold"
+		android:padding="3dip"
+		android:textColor="#000000"
+		android:id="@+id/Trainig6" 
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content" />
+</TableRow>
+<TableRow 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content"
+android:visibility="gone"
+android:id="@+id/TTrainig7">
+	<TextView 
+		android:padding="3dip"
+		android:textColor="#000000"
+		android:text="@string/Training7" 
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content" />
+	<TextView 
+		android:gravity="center"
+		android:textStyle="bold"
+		android:padding="3dip"
+		android:textColor="#000000"
+		android:id="@+id/Trainig7" 
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content" />
+</TableRow>
+<TableRow 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content"
+android:visibility="gone"
+android:id="@+id/TTrainig8">
+	<TextView 
+		android:padding="3dip"
+		android:textColor="#000000"
+		android:text="@string/Training8" 
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content" />
+	<TextView 
+		android:gravity="center"
+		android:textStyle="bold"
+		android:padding="3dip"
+		android:textColor="#000000"
+		android:id="@+id/Trainig8" 
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content" />
+</TableRow>
+<TableRow 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content"
+android:visibility="gone"
+android:id="@+id/TTrainig9">
+	<TextView 
+		android:padding="3dip"
+		android:textColor="#000000"
+		android:text="@string/Training9" 
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content" />
+	<TextView 
+		android:gravity="center"
+		android:textStyle="bold"
+		android:padding="3dip"
+		android:textColor="#000000"
+		android:id="@+id/Trainig9" 
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content" />
+</TableRow>
     <View
         android:layout_height="2dip"
         android:background="#FF909090" />
