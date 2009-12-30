@@ -72,6 +72,8 @@
 	<string name="RestTimeText">Время отдыха (в сек.)</string>
 	<string name="dialog_training_preferences">Свойства занятий</string>
 	<string name="week1">Неделя 1</string>
+	<string name="NameWeek">Неделя:</string>
+	<string name="NameDay">День:</string>
 	<!--  Preferences -->
 	<string name="main_preferences">Основные настройки</string>
 	<string name="GoDayButtonSummary">Перейти к нужному дню или неделе</string>

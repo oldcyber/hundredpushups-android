@@ -174,8 +174,8 @@ mFirstRunOk.setOnClickListener(this);
 		SharedPreferences settings = getSharedPreferences("FileSettings", 0);
         long restTime = settings.getLong("RestTime", 10);
         restTime = (restTime+1)*1000;
-        int trainingWeek = settings.getInt("TrainingWeek", 1);
-    	int trainingDay = settings.getInt("TrainingDay", 1);
+        final int trainingWeek = settings.getInt("TrainingWeek", 1);
+    	final int trainingDay = settings.getInt("TrainingDay", 1);
     	int trainingLevel = settings.getInt("TrainingLevel", 0);    	
     	
     	MakePlan WeekPlan = new MakePlan(trainingLevel, trainingDay, trainingWeek);
@@ -258,11 +258,92 @@ mFirstRunOk.setOnClickListener(this);
                 .setView(textEntryView5)
                 .setPositiveButton(R.string.dialog_Next, new DialogInterface.OnClickListener() { 
                     public void onClick(DialogInterface dialog, int whichButton) { 
-                    	//showDialog(DIALOG_REST_2);
+                    	if (trainingWeek < 5){
+                    		//showDialog(DIALOG_REST_2);
+                    		}
+                    	else if (trainingWeek > 4){
+                    		if (trainingDay == 1){
+                    			//showDialog(DIALOG_REST_2);	
+                    		}
+                    		else {
+                    		showDialog(DIALOG_REST_5);
+                    		}
+                    	}
                     } 
                 })  
                 .create(); 
-        
+
+        case DIALOG_6:
+        	LayoutInflater factory6 = LayoutInflater.from(this); 
+            final View textEntryView6 = factory6.inflate(R.layout.gotraining, null); 
+            TextView tv26 = (TextView) textEntryView6.findViewById(R.id.goTrainingText);
+            tv26.setText(cPlan[5]);
+            return new AlertDialog.Builder(GoTraining.this) 
+                .setIcon(R.drawable.light) 
+                .setTitle(R.string.Training6) 
+                .setView(textEntryView6)
+                .setPositiveButton(R.string.dialog_Next, new DialogInterface.OnClickListener() { 
+                    public void onClick(DialogInterface dialog, int whichButton) { 
+                    	showDialog(DIALOG_REST_6);
+                    } 
+                })  
+                .create(); 
+
+        case DIALOG_7:
+        	LayoutInflater factory7 = LayoutInflater.from(this); 
+            final View textEntryView7 = factory7.inflate(R.layout.gotraining, null); 
+            TextView tv27 = (TextView) textEntryView7.findViewById(R.id.goTrainingText);
+            tv27.setText(cPlan[6]);
+            return new AlertDialog.Builder(GoTraining.this) 
+                .setIcon(R.drawable.light) 
+                .setTitle(R.string.Training7) 
+                .setView(textEntryView7)
+                .setPositiveButton(R.string.dialog_Next, new DialogInterface.OnClickListener() { 
+                    public void onClick(DialogInterface dialog, int whichButton) { 
+                    	if (trainingWeek == 5){
+                    		// do save
+                    	}
+                    	else {
+                    	showDialog(DIALOG_REST_7);
+                    	}
+                    } 
+                })  
+                .create(); 
+
+        case DIALOG_8:
+        	LayoutInflater factory8 = LayoutInflater.from(this); 
+            final View textEntryView8 = factory8.inflate(R.layout.gotraining, null); 
+            TextView tv28 = (TextView) textEntryView8.findViewById(R.id.goTrainingText);
+            tv28.setText(cPlan[7]);
+            return new AlertDialog.Builder(GoTraining.this) 
+                .setIcon(R.drawable.light) 
+                .setTitle(R.string.Training8) 
+                .setView(textEntryView8)
+                .setPositiveButton(R.string.dialog_Next, new DialogInterface.OnClickListener() { 
+                    public void onClick(DialogInterface dialog, int whichButton) { 
+                    	showDialog(DIALOG_REST_8);
+                    } 
+                })  
+                .create(); 
+
+        case DIALOG_9:
+        	LayoutInflater factory9 = LayoutInflater.from(this); 
+            final View textEntryView9 = factory9.inflate(R.layout.gotraining, null); 
+            TextView tv29 = (TextView) textEntryView9.findViewById(R.id.goTrainingText);
+            tv29.setText(cPlan[8]);
+            return new AlertDialog.Builder(GoTraining.this) 
+                .setIcon(R.drawable.light) 
+                .setTitle(R.string.Training6) 
+                .setView(textEntryView9)
+                .setPositiveButton(R.string.dialog_Next, new DialogInterface.OnClickListener() { 
+                    public void onClick(DialogInterface dialog, int whichButton) { 
+                    	//showDialog(DIALOG_REST_6);
+                    } 
+                })  
+                .create(); 
+
+//-------------------------------------------------------------------------------------           
+
         case DIALOG_REST_1:
         	Dialog dialog1 = new Dialog(this);
         	dialog1.setContentView(R.layout.timer);
@@ -327,7 +408,71 @@ mFirstRunOk.setOnClickListener(this);
                 }
              }.start(); 
          	return dialog4;
-         	//finish
+         	
+        case DIALOG_REST_5:
+        	Dialog dialog5 = new Dialog(this);
+        	dialog5.setContentView(R.layout.timer);
+        	dialog5.setTitle(R.string.Rest);
+        	final TextView tv15 = (TextView) dialog5.findViewById(R.id.TimerText);
+            new CountDownTimer(restTime, 1000) {
+                public void onTick(long millisUntilFinished) {
+                    tv15.setText(" "+millisUntilFinished / 1000+" ");
+                }
+                public void onFinish() {
+                showDialog(DIALOG_6);
+                removeDialog(15);
+                }
+             }.start(); 
+         	return dialog5;
+
+        case DIALOG_REST_6:
+        	Dialog dialog6 = new Dialog(this);
+        	dialog6.setContentView(R.layout.timer);
+        	dialog6.setTitle(R.string.Rest);
+        	final TextView tv16 = (TextView) dialog6.findViewById(R.id.TimerText);
+            new CountDownTimer(restTime, 1000) {
+                public void onTick(long millisUntilFinished) {
+                    tv16.setText(" "+millisUntilFinished / 1000+" ");
+                }
+                public void onFinish() {
+               	showDialog(DIALOG_7);
+                removeDialog(16);
+                }
+             }.start(); 
+         	return dialog6;
+         	
+        case DIALOG_REST_7:
+        	Dialog dialog7 = new Dialog(this);
+        	dialog7.setContentView(R.layout.timer);
+        	dialog7.setTitle(R.string.Rest);
+        	final TextView tv17 = (TextView) dialog7.findViewById(R.id.TimerText);
+            new CountDownTimer(restTime, 1000) {
+                public void onTick(long millisUntilFinished) {
+                    tv17.setText(" "+millisUntilFinished / 1000+" ");
+                }
+                public void onFinish() {
+                showDialog(DIALOG_8);
+                removeDialog(17);
+                }
+             }.start(); 
+         	return dialog7;
+         	
+        case DIALOG_REST_8:
+        	Dialog dialog8 = new Dialog(this);
+        	dialog8.setContentView(R.layout.timer);
+        	dialog8.setTitle(R.string.Rest);
+        	final TextView tv18 = (TextView) dialog8.findViewById(R.id.TimerText);
+            new CountDownTimer(restTime, 1000) {
+                public void onTick(long millisUntilFinished) {
+                    tv18.setText(" "+millisUntilFinished / 1000+" ");
+                }
+                public void onFinish() {
+                showDialog(DIALOG_9);
+                removeDialog(18);
+                }
+             }.start(); 
+         	return dialog8;
+ 
         case DIALOG_SAVE:
         	return new AlertDialog.Builder(GoTraining.this)
         	.setIcon(R.drawable.light)
