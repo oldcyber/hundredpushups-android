@@ -9,75 +9,79 @@ package ru.d_lab.HundredPushUps;
 
 public final class R {
     public static final class array {
+        public static final int GoDayConfigData=0x7f050004;
+        public static final int GoDayConfigName=0x7f050002;
+        public static final int GoWeekConfigData=0x7f050005;
+        public static final int GoWeekConfigName=0x7f050003;
         public static final int tdays=0x7f050001;
-        public static final int training_day=0x7f050002;
+        public static final int training_day=0x7f050006;
         public static final int tweeks=0x7f050000;
         /**  Week 1 
          */
-        public static final int week1day1level1=0x7f050003;
-        public static final int week1day1level2=0x7f050004;
-        public static final int week1day1level3=0x7f050005;
-        public static final int week1day2level1=0x7f050006;
-        public static final int week1day2level2=0x7f050007;
-        public static final int week1day2level3=0x7f050008;
-        public static final int week1day3level1=0x7f050009;
-        public static final int week1day3level2=0x7f05000a;
-        public static final int week1day3level3=0x7f05000b;
+        public static final int week1day1level1=0x7f050007;
+        public static final int week1day1level2=0x7f050008;
+        public static final int week1day1level3=0x7f050009;
+        public static final int week1day2level1=0x7f05000a;
+        public static final int week1day2level2=0x7f05000b;
+        public static final int week1day2level3=0x7f05000c;
+        public static final int week1day3level1=0x7f05000d;
+        public static final int week1day3level2=0x7f05000e;
+        public static final int week1day3level3=0x7f05000f;
         /**  Week 2 
          */
-        public static final int week2day1level1=0x7f05000c;
-        public static final int week2day1level2=0x7f05000d;
-        public static final int week2day1level3=0x7f05000e;
-        public static final int week2day2level1=0x7f05000f;
-        public static final int week2day2level2=0x7f050010;
-        public static final int week2day2level3=0x7f050011;
-        public static final int week2day3level1=0x7f050012;
-        public static final int week2day3level2=0x7f050013;
-        public static final int week2day3level3=0x7f050014;
+        public static final int week2day1level1=0x7f050010;
+        public static final int week2day1level2=0x7f050011;
+        public static final int week2day1level3=0x7f050012;
+        public static final int week2day2level1=0x7f050013;
+        public static final int week2day2level2=0x7f050014;
+        public static final int week2day2level3=0x7f050015;
+        public static final int week2day3level1=0x7f050016;
+        public static final int week2day3level2=0x7f050017;
+        public static final int week2day3level3=0x7f050018;
         /**  Week 3 
          */
-        public static final int week3day1level1=0x7f050015;
-        public static final int week3day1level2=0x7f050016;
-        public static final int week3day1level3=0x7f050017;
-        public static final int week3day2level1=0x7f050018;
-        public static final int week3day2level2=0x7f050019;
-        public static final int week3day2level3=0x7f05001a;
-        public static final int week3day3level1=0x7f05001b;
-        public static final int week3day3level2=0x7f05001c;
-        public static final int week3day3level3=0x7f05001d;
+        public static final int week3day1level1=0x7f050019;
+        public static final int week3day1level2=0x7f05001a;
+        public static final int week3day1level3=0x7f05001b;
+        public static final int week3day2level1=0x7f05001c;
+        public static final int week3day2level2=0x7f05001d;
+        public static final int week3day2level3=0x7f05001e;
+        public static final int week3day3level1=0x7f05001f;
+        public static final int week3day3level2=0x7f050020;
+        public static final int week3day3level3=0x7f050021;
         /**  Week 4 
          */
-        public static final int week4day1level1=0x7f05001e;
-        public static final int week4day1level2=0x7f05001f;
-        public static final int week4day1level3=0x7f050020;
-        public static final int week4day2level1=0x7f050021;
-        public static final int week4day2level2=0x7f050022;
-        public static final int week4day2level3=0x7f050023;
-        public static final int week4day3level1=0x7f050024;
-        public static final int week4day3level2=0x7f050025;
-        public static final int week4day3level3=0x7f050026;
+        public static final int week4day1level1=0x7f050022;
+        public static final int week4day1level2=0x7f050023;
+        public static final int week4day1level3=0x7f050024;
+        public static final int week4day2level1=0x7f050025;
+        public static final int week4day2level2=0x7f050026;
+        public static final int week4day2level3=0x7f050027;
+        public static final int week4day3level1=0x7f050028;
+        public static final int week4day3level2=0x7f050029;
+        public static final int week4day3level3=0x7f05002a;
         /**  Week 5 
          */
-        public static final int week5day1level1=0x7f050027;
-        public static final int week5day1level2=0x7f050028;
-        public static final int week5day1level3=0x7f050029;
-        public static final int week5day2level1=0x7f05002a;
-        public static final int week5day2level2=0x7f05002b;
-        public static final int week5day2level3=0x7f05002c;
-        public static final int week5day3level1=0x7f05002d;
-        public static final int week5day3level2=0x7f05002e;
-        public static final int week5day3level3=0x7f05002f;
+        public static final int week5day1level1=0x7f05002b;
+        public static final int week5day1level2=0x7f05002c;
+        public static final int week5day1level3=0x7f05002d;
+        public static final int week5day2level1=0x7f05002e;
+        public static final int week5day2level2=0x7f05002f;
+        public static final int week5day2level3=0x7f050030;
+        public static final int week5day3level1=0x7f050031;
+        public static final int week5day3level2=0x7f050032;
+        public static final int week5day3level3=0x7f050033;
         /**  Week 6 
          */
-        public static final int week6day1level1=0x7f050030;
-        public static final int week6day1level2=0x7f050031;
-        public static final int week6day1level3=0x7f050032;
-        public static final int week6day2level1=0x7f050033;
-        public static final int week6day2level2=0x7f050034;
-        public static final int week6day2level3=0x7f050035;
-        public static final int week6day3level1=0x7f050036;
-        public static final int week6day3level2=0x7f050037;
-        public static final int week6day3level3=0x7f050038;
+        public static final int week6day1level1=0x7f050034;
+        public static final int week6day1level2=0x7f050035;
+        public static final int week6day1level3=0x7f050036;
+        public static final int week6day2level1=0x7f050037;
+        public static final int week6day2level2=0x7f050038;
+        public static final int week6day2level3=0x7f050039;
+        public static final int week6day3level1=0x7f05003a;
+        public static final int week6day3level2=0x7f05003b;
+        public static final int week6day3level3=0x7f05003c;
     }
     public static final class attr {
     }

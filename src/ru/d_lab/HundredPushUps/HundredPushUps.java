@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -32,7 +34,6 @@ public class HundredPushUps extends Activity implements OnClickListener {
         //int trainingLevel = settings.getInt("TrainingLevel", 0);
         int userLevel = settings.getInt("UserLevel", 0);
         //int userAge = settings.getInt("UserAge", 0);
-        
        //boolean firstRun = true;
         //check applications state and set button text
         if (firstRun == true)
@@ -76,6 +77,13 @@ public class HundredPushUps extends Activity implements OnClickListener {
         sfirstrun = firstRun;       
     	}
     
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.home_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }   
+    
     /** Buttons */
     public void onClick(View v)
     {
@@ -93,10 +101,9 @@ public class HundredPushUps extends Activity implements OnClickListener {
     	}
     	case R.id.ConfigurationButton:
     	{
-    		//setContentView.(R.layout.configuration);
     		Intent intent = new Intent();
-    		intent.setClass(this, Configuration.class);
-    		//intent.setClass(this, PreferencesXml.class);
+    		//intent.setClass(this, Configuration.class);
+    		intent.setClass(this, PreferencesXml.class);
     		startActivity(intent);
     		break;
     	}
@@ -107,7 +114,14 @@ public class HundredPushUps extends Activity implements OnClickListener {
     		startActivity(intent);
     		break;
     	}
-    	default:
+       	case R.id.ExitMenuItem:
+       	{
+       		Intent intent = new Intent();
+    		intent.setClass(this, Configuration.class);
+    		startActivity(intent);
+    		break;
+       	}
+       	default:
     		break;
     	}
     	

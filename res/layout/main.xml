@@ -45,6 +45,7 @@ android:layout_width="fill_parent"
 android:layout_height="20px" />
 <Button 
 android:text="@string/MainButton" 
+style="?android:attr/buttonStyleSmall"
 android:id="@+id/MainButton" 
 android:drawableLeft="@drawable/ic_menu_agenda"
 android:layout_width="fill_parent" 
@@ -52,6 +53,7 @@ android:layout_height="wrap_content"
 android:textStyle="bold"/>
 <Button 
 android:text="@string/ConfigurationButton" 
+style="?android:attr/buttonStyleSmall"
 android:id="@+id/ConfigurationButton"
 android:drawableLeft="@drawable/ic_menu_preferences" 
 android:layout_width="fill_parent" 
@@ -59,6 +61,7 @@ android:layout_height="wrap_content"
 android:textStyle="bold"/>
 <Button 
 android:text="@string/StatsButton" 
+style="?android:attr/buttonStyleSmall"
 android:id="@+id/StatsButton" 
 android:drawableLeft="@drawable/mm_chart"
 android:layout_width="fill_parent" 
