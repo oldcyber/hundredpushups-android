@@ -65,6 +65,7 @@
 	<string name="TrainingMax">не менее</string>
 	<string name="Rest">Отдых</string>
 	<string name="TrainigNum">Количество отжиманий:</string>
+	<string name="EndTraining">Закончить тренировку</string>
 	<!-- Configuration -->
 	<string name="ResetButton">Сбросить всё!</string>
 	<string name="ResetFirstInitButton">Повторить начальный тест</string>
@@ -79,4 +80,7 @@
 	<string name="GoDayButtonSummary">Перейти к нужному дню или неделе</string>
 	<string name="ResetFirstInitButtonSummary">Пройти начальный тест заново</string>
 	<string name="ResetButtonSummary">Сбросить все настройки</string>
+	<!-- Write Result -->
+	<string name="TextWriteresult">Введите число отжиманий, которое вы смогли сделать</string>
+	
 </resources>

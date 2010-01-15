@@ -1,6 +1,7 @@
 package ru.d_lab.HundredPushUps;
 
 import ru.d_lab.HundredPushUps.tools.MakePlan;
+import ru.d_lab.HundredPushUps.tools.WriteResult;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -183,7 +184,6 @@ mFirstRunOk.setOnClickListener(this);
     	
     	switch (id) {
         case DIALOG_1:
-        	
             LayoutInflater factory1 = LayoutInflater.from(this); 
             final View textEntryView1 = factory1.inflate(R.layout.gotraining, null); 
             TextView tv21 = (TextView) textEntryView1.findViewById(R.id.goTrainingText);
@@ -259,11 +259,12 @@ mFirstRunOk.setOnClickListener(this);
                 .setPositiveButton(R.string.dialog_Next, new DialogInterface.OnClickListener() { 
                     public void onClick(DialogInterface dialog, int whichButton) { 
                     	if (trainingWeek < 5){
-                    		//showDialog(DIALOG_REST_2);
+                    		saveResult();
                     		}
                     	else if (trainingWeek > 4){
                     		if (trainingDay == 1){
-                    			//showDialog(DIALOG_REST_2);	
+                    			//showDialog(DIALOG_REST_2);
+                    			saveResult();
                     		}
                     		else {
                     		showDialog(DIALOG_REST_5);
@@ -302,6 +303,7 @@ mFirstRunOk.setOnClickListener(this);
                     public void onClick(DialogInterface dialog, int whichButton) { 
                     	if (trainingWeek == 5){
                     		// do save
+                    		saveResult();
                     	}
                     	else {
                     	showDialog(DIALOG_REST_7);
@@ -337,7 +339,9 @@ mFirstRunOk.setOnClickListener(this);
                 .setView(textEntryView9)
                 .setPositiveButton(R.string.dialog_Next, new DialogInterface.OnClickListener() { 
                     public void onClick(DialogInterface dialog, int whichButton) { 
-                    	//showDialog(DIALOG_REST_6);
+                    	//showDialog(DIALOG_SAVE);
+                    	saveResult();
+                    	
                     } 
                 })  
                 .create(); 
@@ -474,6 +478,15 @@ mFirstRunOk.setOnClickListener(this);
          	return dialog8;
  
         case DIALOG_SAVE:
+        	
+        	/*
+        	final WriteResult wr = new WriteResult(this);
+            wr.setTitle(R.string.EndTraining);
+            wr.setCancelable(false);
+            wr.show();
+            */
+        	
+        	/*
         	return new AlertDialog.Builder(GoTraining.this)
         	.setIcon(R.drawable.light)
             .setTitle(R.string.Training5)
@@ -484,13 +497,21 @@ mFirstRunOk.setOnClickListener(this);
                 	//showDialog(DIALOG_REST);
                 }
             })		
-            .create();   	
+            .create(); */   	
     	}
-		return null;
+    	saveResult();
+    	return null;
 	}	
-	// Button Listener	
+	private void saveResult(){
+	final WriteResult wr = new WriteResult(this);
+    wr.setTitle(R.string.EndTraining);
+    wr.setCancelable(false);
+    wr.show();
+	}
+	
+    // Button Listener	
 	public void onClick(View v)
-    {
+    {	
 		switch (v.getId())
     	{
 		case R.id.BeginTraining:
@@ -498,20 +519,10 @@ mFirstRunOk.setOnClickListener(this);
     		showDialog(DIALOG_1);
     		break;
     	}
-//		case R.id.dialog_Next:
-//		{
-//			showDialog(DIALOG_REST_1);
-//            removeDialog(1);
-//			break;
-//		}
     	default:
     		break;
     	}
-		/*
-		Intent intent = new Intent();
-        intent.setClass(this, Timer.class);
-        startActivity(intent);
-        */
     }
+
 }
 

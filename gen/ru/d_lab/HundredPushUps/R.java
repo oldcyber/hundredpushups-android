@@ -99,11 +99,11 @@ public final class R {
         public static final int mm_flag=0x7f02000a;
     }
     public static final class id {
-        public static final int AboutMenuItem=0x7f080032;
+        public static final int AboutMenuItem=0x7f080035;
         public static final int BeginTraining=0x7f080031;
         public static final int ConfigurationButton=0x7f080015;
         public static final int CountPushUps=0x7f08000b;
-        public static final int ExitMenuItem=0x7f080033;
+        public static final int ExitMenuItem=0x7f080036;
         public static final int FirstRunAgree=0x7f08000d;
         public static final int GoDayButton=0x7f080006;
         public static final int HeadText=0x7f08000e;
@@ -114,6 +114,7 @@ public final class R {
         public static final int ResetButton=0x7f080008;
         public static final int ResetFirstInitButton=0x7f080007;
         public static final int RestTime=0x7f080002;
+        public static final int Result=0x7f080032;
         public static final int SaveData=0x7f080003;
         public static final int SetResultText=0x7f080009;
         public static final int Spinner01=0x7f080004;
@@ -149,6 +150,8 @@ public final class R {
         public static final int UserAge=0x7f08000c;
         public static final int View01=0x7f08000a;
         public static final int build=0x7f080000;
+        public static final int button_cancel=0x7f080034;
+        public static final int button_save=0x7f080033;
         public static final int copyright=0x7f080001;
         public static final int goTrainingText=0x7f08000f;
     }
@@ -161,6 +164,7 @@ public final class R {
         public static final int statistics=0x7f030005;
         public static final int timer=0x7f030006;
         public static final int training=0x7f030007;
+        public static final int writeresult=0x7f030008;
     }
     public static final class menu {
         public static final int home_menu=0x7f070000;
@@ -171,10 +175,11 @@ public final class R {
         public static final int BeginTraining=0x7f06002c;
         public static final int ChangeTraining=0x7f060010;
         public static final int ConfigurationButton=0x7f06000d;
+        public static final int EndTraining=0x7f06003a;
         public static final int ErrorFirstInit=0x7f060021;
         public static final int ErrorFirstInit1=0x7f060022;
-        public static final int GoDayButton=0x7f06003c;
-        public static final int GoDayButtonSummary=0x7f060043;
+        public static final int GoDayButton=0x7f06003d;
+        public static final int GoDayButtonSummary=0x7f060044;
         public static final int GoTraining=0x7f06000f;
         /**  mainbuttons 
          */
@@ -182,17 +187,17 @@ public final class R {
         /**  firstinit 
          */
         public static final int ManagedPushUps=0x7f06001e;
-        public static final int NameDay=0x7f060041;
-        public static final int NameWeek=0x7f060040;
+        public static final int NameDay=0x7f060042;
+        public static final int NameWeek=0x7f060041;
         public static final int Ok=0x7f060007;
         /**  Configuration 
          */
-        public static final int ResetButton=0x7f06003a;
-        public static final int ResetButtonSummary=0x7f060045;
-        public static final int ResetFirstInitButton=0x7f06003b;
-        public static final int ResetFirstInitButtonSummary=0x7f060044;
+        public static final int ResetButton=0x7f06003b;
+        public static final int ResetButtonSummary=0x7f060046;
+        public static final int ResetFirstInitButton=0x7f06003c;
+        public static final int ResetFirstInitButtonSummary=0x7f060045;
         public static final int Rest=0x7f060038;
-        public static final int RestTimeText=0x7f06003d;
+        public static final int RestTimeText=0x7f06003e;
         public static final int SetResultAge=0x7f060025;
         public static final int SetResultCount=0x7f060024;
         public static final int SetResultText=0x7f060023;
@@ -206,6 +211,9 @@ public final class R {
          */
         public static final int StatsWelcome=0x7f060026;
         public static final int TextView01=0x7f060002;
+        /**  Write Result 
+         */
+        public static final int TextWriteresult=0x7f060047;
         public static final int TrainigNum=0x7f060039;
         public static final int Training1=0x7f06002e;
         public static final int Training2=0x7f06002f;
@@ -227,7 +235,7 @@ public final class R {
         public static final int dialog_Next=0x7f06000b;
         public static final int dialog_Other=0x7f060009;
         public static final int dialog_Save=0x7f06000a;
-        public static final int dialog_training_preferences=0x7f06003e;
+        public static final int dialog_training_preferences=0x7f06003f;
         public static final int hello=0x7f060000;
         /**  home_menu 
          */
@@ -236,7 +244,7 @@ public final class R {
         public static final int legal=0x7f060003;
         /**   Preferences 
          */
-        public static final int main_preferences=0x7f060042;
+        public static final int main_preferences=0x7f060043;
         public static final int mm_BackPastWeekMenuItem=0x7f060018;
         public static final int mm_ContinueTrainingMenuItem=0x7f060016;
         public static final int mm_NewTrainigMenuItem=0x7f060015;
@@ -253,7 +261,7 @@ public final class R {
         public static final int tv2T1=0x7f06001c;
         public static final int tv2T2=0x7f06001d;
         public static final int version=0x7f060005;
-        public static final int week1=0x7f06003f;
+        public static final int week1=0x7f060040;
     }
     public static final class xml {
         public static final int preferences=0x7f040000;
