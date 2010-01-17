@@ -3,6 +3,7 @@ package ru.d_lab.HundredPushUps;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -35,6 +36,15 @@ public class HundredPushUps extends Activity implements OnClickListener {
         int userLevel = settings.getInt("UserLevel", 0);
         //int userAge = settings.getInt("UserAge", 0);
        //boolean firstRun = true;
+        //resize background
+        
+        /*Object originalImage = Bitmap.createScaleBitmap(
+        		originalImage,
+        		view.getWidth(),
+        		view.getHeight(),
+        		true);
+        */
+        
         //check applications state and set button text
         if (firstRun == true)
         {
