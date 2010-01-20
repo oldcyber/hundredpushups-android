@@ -1,6 +1,7 @@
 package ru.d_lab.HundredPushUps;
 
 import ru.d_lab.HundredPushUps.tools.MakePlan;
+import ru.d_lab.HundredPushUps.tools.TrainingWindow;
 import ru.d_lab.HundredPushUps.tools.WriteResult;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -36,6 +37,7 @@ public class GoTraining extends Activity implements OnClickListener {
 	private static final int DIALOG_REST_7=17;
 	private static final int DIALOG_REST_8=18;
 	private static final int DIALOG_SAVE = 10;
+
 	// Welcome training screen
 	@Override
 	public void onCreate(Bundle savedInstanceState)
@@ -516,7 +518,11 @@ mFirstRunOk.setOnClickListener(this);
     	{
 		case R.id.BeginTraining:
     	{
-    		showDialog(DIALOG_1);
+    		String qq = "10";
+    		int ww = 2;
+    		final TrainingWindow tw = new TrainingWindow(this, qq, ww);
+    	    tw.show();
+    		//showDialog(DIALOG_1);
     		break;
     	}
     	default:
