@@ -8,6 +8,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
+import android.content.DialogInterface.OnDismissListener;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.LayoutInflater;
@@ -518,11 +519,58 @@ mFirstRunOk.setOnClickListener(this);
     	{
 		case R.id.BeginTraining:
     	{
-    		String qq = "10";
-    		int ww = 2;
-    		final TrainingWindow tw = new TrainingWindow(this, qq, ww);
-    	    tw.show();
-    		//showDialog(DIALOG_1);
+    		int num_tr=0;
+    		long time_rest = 1000;
+    		//reading config
+    		SharedPreferences settings = getSharedPreferences("FileSettings", 0);
+    		int trainingWeek = settings.getInt("TrainingWeek", 1);
+    		int trainingDay = settings.getInt("TrainingDay", 1);
+    		int trainingLevel = settings.getInt("TrainingLevel", 0);
+    		
+    		//calculate data
+    		MakePlan WeekPlan = new MakePlan(trainingLevel, trainingDay, trainingWeek);
+    		String[] cPlan = WeekPlan.gettTrainingPlan(this);
+			
+    		//begin training
+    		
+    		/*
+			switch(i) {
+    		case DIALOG_1:
+    		
+    			return;
+    		case DIALOG_2:
+    			
+    			return;
+    		}
+    		*/
+    		
+    		
+    		
+    		for (int i = 0; i < cPlan.length; i++) {
+    			if (i==0){num_tr=1;}
+    			else if (i==1){num_tr=2;}
+    			else if (i==2){num_tr=3;}
+        		//---
+    			final TrainingWindow tw = new TrainingWindow(this, cPlan[i], i);
+    			//final RestWindow rw = new RestWindow(this,time_rest);    		
+        		//---
+    			try {
+    			tw.show();
+    			wait();
+    			} catch (InterruptedException e){
+    				
+    			}
+    			
+        		tw.setOnDismissListener(new OnDismissListener() { 
+        			public void onDismiss(DialogInterface arg0) { 
+        				//tw.cancel();
+        				//rw.show(); 
+        				} 
+        		});
+        		//---
+    			
+    		}
+    		
     		break;
     	}
     	default:

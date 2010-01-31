@@ -68,14 +68,16 @@ public class TrainingWindow extends Dialog {
         
         setOnNextClick(new View.OnClickListener() {
 			
+			
+			
 			@Override
-			public void onClick(View v) {
+			public void onClick(View v) {				
 				dismiss();
 				// TODO Auto-generated method stub
 			}
 		});
 	}
-		
+
 	   public void setOnNextClick(View.OnClickListener l) {
 	        next_button.setOnClickListener(l);
 	    }
