@@ -533,43 +533,28 @@ mFirstRunOk.setOnClickListener(this);
 			
     		//begin training
     		
-    		/*
-			switch(i) {
-    		case DIALOG_1:
-    		
-    			return;
-    		case DIALOG_2:
-    			
-    			return;
-    		}
-    		*/
-    		
-    		
-    		
+    		Dialog[] dialogs = new Dialog[cPlan.length];
     		for (int i = 0; i < cPlan.length; i++) {
-    			if (i==0){num_tr=1;}
-    			else if (i==1){num_tr=2;}
-    			else if (i==2){num_tr=3;}
-        		//---
     			final TrainingWindow tw = new TrainingWindow(this, cPlan[i], i);
-    			//final RestWindow rw = new RestWindow(this,time_rest);    		
-        		//---
-    			try {
-    			tw.show();
-    			wait();
-    			} catch (InterruptedException e){
-    				
-    			}
+    			dialogs[i]= tw;
+    		}
+    		for (int i = 0; i < cPlan.length-1; i++) {
+    			//dialogs[i].setNextDialog(dialogs[i+1]);
     			
-        		tw.setOnDismissListener(new OnDismissListener() { 
+    		}
+    		dialogs[1].show();
+    		
+/*    		int num_dialog=0;
+			if (num_dialog<cPlan.length){
+    			dialogs[num_dialog].show();
+    			num_dialog = num_dialog+1;
+    		}*/
+        		/*tw.setOnDismissListener(new OnDismissListener() { 
         			public void onDismiss(DialogInterface arg0) { 
         				//tw.cancel();
         				//rw.show(); 
-        				} 
-        		});
-        		//---
-    			
-    		}
+        				} */
+ 
     		
     		break;
     	}

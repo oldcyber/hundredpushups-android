@@ -30,9 +30,9 @@ public class TrainingWindow extends Dialog {
     @Override
 	public void onCreate(Bundle savedInstanceState) { 
         super.onCreate(savedInstanceState);
-        
+
 		setContentView(R.layout.trainingwindow);
-		
+
 		if (num_training == 1){
 			setTitle(R.string.Training1);
 		}
@@ -78,7 +78,10 @@ public class TrainingWindow extends Dialog {
 		});
 	}
 
-	   public void setOnNextClick(View.OnClickListener l) {
+	public void setOnNextClick(View.OnClickListener l) {
 	        next_button.setOnClickListener(l);
 	    }
+	   public void setNextDialog(){
+		   
+	   }
 }
