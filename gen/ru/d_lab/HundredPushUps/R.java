@@ -99,22 +99,29 @@ public final class R {
         public static final int mm_flag=0x7f02000a;
     }
     public static final class id {
-        public static final int AboutMenuItem=0x7f090036;
+        public static final int AboutMenuItem=0x7f09003e;
         public static final int BeginTraining=0x7f090031;
+        public static final int Button01=0x7f090036;
+        public static final int Button02=0x7f090038;
+        public static final int ButtonArea=0x7f090035;
+        public static final int ButtonCancel=0x7f090039;
+        public static final int ButtonOk=0x7f090037;
         public static final int ConfigurationButton=0x7f090015;
         public static final int CountPushUps=0x7f09000b;
-        public static final int ExitMenuItem=0x7f090037;
+        public static final int DialogTrainingTex=0x7f090034;
+        public static final int ExitMenuItem=0x7f09003f;
         public static final int FirstRunAgree=0x7f09000d;
         public static final int GoDayButton=0x7f090006;
         public static final int HeadText=0x7f09000e;
         public static final int ImageView01=0x7f090011;
+        public static final int InfoArea=0x7f090033;
         public static final int LinearLayout01=0x7f090010;
         public static final int MainButton=0x7f090014;
         public static final int RelativeLayout01=0x7f090022;
         public static final int ResetButton=0x7f090008;
         public static final int ResetFirstInitButton=0x7f090007;
         public static final int RestTime=0x7f090002;
-        public static final int Result=0x7f090033;
+        public static final int Result=0x7f09003b;
         public static final int SaveData=0x7f090003;
         public static final int SetResultText=0x7f090009;
         public static final int Spinner01=0x7f090004;
@@ -147,13 +154,14 @@ public final class R {
         public static final int Trainig7=0x7f09002c;
         public static final int Trainig8=0x7f09002e;
         public static final int Trainig9=0x7f090030;
+        public static final int TrainingDialog=0x7f090032;
         public static final int UserAge=0x7f09000c;
         public static final int View01=0x7f09000a;
         public static final int build=0x7f090000;
-        public static final int button_cancel=0x7f090035;
-        public static final int button_save=0x7f090034;
+        public static final int button_cancel=0x7f09003d;
+        public static final int button_save=0x7f09003c;
         public static final int copyright=0x7f090001;
-        public static final int dialog_Next=0x7f090032;
+        public static final int dialog_Next=0x7f09003a;
         public static final int goTrainingText=0x7f09000f;
     }
     public static final class layout {
@@ -165,8 +173,9 @@ public final class R {
         public static final int statistics=0x7f030005;
         public static final int timer=0x7f030006;
         public static final int training=0x7f030007;
-        public static final int trainingwindow=0x7f030008;
-        public static final int writeresult=0x7f030009;
+        public static final int training_dialog=0x7f030008;
+        public static final int trainingwindow=0x7f030009;
+        public static final int writeresult=0x7f03000a;
     }
     public static final class menu {
         public static final int home_menu=0x7f080000;
