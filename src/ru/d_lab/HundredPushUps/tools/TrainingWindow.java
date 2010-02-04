@@ -81,7 +81,4 @@ public class TrainingWindow extends Dialog {
 	public void setOnNextClick(View.OnClickListener l) {
 	        next_button.setOnClickListener(l);
 	    }
-	   public void setNextDialog(){
-		   
-	   }
 }

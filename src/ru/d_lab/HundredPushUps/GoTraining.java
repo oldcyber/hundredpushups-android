@@ -1,6 +1,8 @@
 package ru.d_lab.HundredPushUps;
 
 import ru.d_lab.HundredPushUps.tools.MakePlan;
+import ru.d_lab.HundredPushUps.tools.RestWindow;
+import ru.d_lab.HundredPushUps.tools.TrainingDialog;
 import ru.d_lab.HundredPushUps.tools.TrainingWindow;
 import ru.d_lab.HundredPushUps.tools.WriteResult;
 import android.app.Activity;
@@ -519,8 +521,12 @@ mFirstRunOk.setOnClickListener(this);
     	{
 		case R.id.BeginTraining:
     	{
-    		int num_tr=0;
-    		long time_rest = 1000;
+    		TrainingDialog td = new TrainingDialog(this);
+    		td.show();
+    		
+    		//---
+    		/*int num_tr=0;
+    		long time_rest = 2000;
     		//reading config
     		SharedPreferences settings = getSharedPreferences("FileSettings", 0);
     		int trainingWeek = settings.getInt("TrainingWeek", 1);
@@ -533,29 +539,27 @@ mFirstRunOk.setOnClickListener(this);
 			
     		//begin training
     		
-    		Dialog[] dialogs = new Dialog[cPlan.length];
+ //   		Dialog[] dialogs = new Dialog[cPlan.length];
     		for (int i = 0; i < cPlan.length; i++) {
     			final TrainingWindow tw = new TrainingWindow(this, cPlan[i], i);
-    			dialogs[i]= tw;
-    		}
-    		for (int i = 0; i < cPlan.length-1; i++) {
-    			//dialogs[i].setNextDialog(dialogs[i+1]);
-    			
-    		}
-    		dialogs[1].show();
-    		
-/*    		int num_dialog=0;
-			if (num_dialog<cPlan.length){
-    			dialogs[num_dialog].show();
-    			num_dialog = num_dialog+1;
+    			final RestWindow rw = new RestWindow(this,time_rest);
+    			tw.show();
+    			tw.setOnDismissListener(new OnDismissListener(){
+    				public void onDismiss(DialogInterface arg0){
+    				rw.show();		
+    				}
+    			});
+    			//dialogs[i]= tw;
     		}*/
-        		/*tw.setOnDismissListener(new OnDismissListener() { 
-        			public void onDismiss(DialogInterface arg0) { 
-        				//tw.cancel();
-        				//rw.show(); 
-        				} */
- 
     		
+    		//-----
+    		
+ /*   		for (int i = 0; i < cPlan.length-1; i++) {
+    			//dialogs[i].setNextDialog(dialogs[i+1]);
+    			dialogs[i].show();
+    		}*/
+    		
+    		//dialogs[1].setOnDismissListener(null);   		
     		break;
     	}
     	default:
