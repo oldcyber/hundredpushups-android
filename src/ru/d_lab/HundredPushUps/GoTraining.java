@@ -521,17 +521,22 @@ mFirstRunOk.setOnClickListener(this);
     	{
 		case R.id.BeginTraining:
     	{
-    		TrainingDialog td = new TrainingDialog(this);
+    		SharedPreferences settings = getSharedPreferences("FileSettings", 0);
+    		int trainingWeek = settings.getInt("TrainingWeek", 1);
+    		int trainingDay = settings.getInt("TrainingDay", 1);
+    		int trainingLevel = settings.getInt("TrainingLevel", 0);
+    		
+    		MakePlan WeekPlan = new MakePlan(trainingLevel, trainingDay, trainingWeek);
+    		String[] cPlan = WeekPlan.gettTrainingPlan(this);
+    		
+    		TrainingDialog td = new TrainingDialog(this, trainingWeek,trainingDay,trainingLevel, cPlan);
     		td.show();
     		
     		//---
     		/*int num_tr=0;
     		long time_rest = 2000;
     		//reading config
-    		SharedPreferences settings = getSharedPreferences("FileSettings", 0);
-    		int trainingWeek = settings.getInt("TrainingWeek", 1);
-    		int trainingDay = settings.getInt("TrainingDay", 1);
-    		int trainingLevel = settings.getInt("TrainingLevel", 0);
+
     		
     		//calculate data
     		MakePlan WeekPlan = new MakePlan(trainingLevel, trainingDay, trainingWeek);

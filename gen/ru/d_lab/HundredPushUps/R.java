@@ -99,17 +99,15 @@ public final class R {
         public static final int mm_flag=0x7f02000a;
     }
     public static final class id {
-        public static final int AboutMenuItem=0x7f09003e;
+        public static final int AboutMenuItem=0x7f09003c;
         public static final int BeginTraining=0x7f090031;
-        public static final int Button01=0x7f090036;
-        public static final int Button02=0x7f090038;
         public static final int ButtonArea=0x7f090035;
-        public static final int ButtonCancel=0x7f090039;
-        public static final int ButtonOk=0x7f090037;
+        public static final int ButtonCancel=0x7f090037;
+        public static final int ButtonOk=0x7f090036;
         public static final int ConfigurationButton=0x7f090015;
         public static final int CountPushUps=0x7f09000b;
         public static final int DialogTrainingTex=0x7f090034;
-        public static final int ExitMenuItem=0x7f09003f;
+        public static final int ExitMenuItem=0x7f09003d;
         public static final int FirstRunAgree=0x7f09000d;
         public static final int GoDayButton=0x7f090006;
         public static final int HeadText=0x7f09000e;
@@ -121,7 +119,7 @@ public final class R {
         public static final int ResetButton=0x7f090008;
         public static final int ResetFirstInitButton=0x7f090007;
         public static final int RestTime=0x7f090002;
-        public static final int Result=0x7f09003b;
+        public static final int Result=0x7f090039;
         public static final int SaveData=0x7f090003;
         public static final int SetResultText=0x7f090009;
         public static final int Spinner01=0x7f090004;
@@ -158,10 +156,10 @@ public final class R {
         public static final int UserAge=0x7f09000c;
         public static final int View01=0x7f09000a;
         public static final int build=0x7f090000;
-        public static final int button_cancel=0x7f09003d;
-        public static final int button_save=0x7f09003c;
+        public static final int button_cancel=0x7f09003b;
+        public static final int button_save=0x7f09003a;
         public static final int copyright=0x7f090001;
-        public static final int dialog_Next=0x7f09003a;
+        public static final int dialog_Next=0x7f090038;
         public static final int goTrainingText=0x7f09000f;
     }
     public static final class layout {
