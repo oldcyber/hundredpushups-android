@@ -27,7 +27,7 @@ public class RestWindow extends Dialog {
     @Override
 	public void onCreate(Bundle savedInstanceState) { 
         super.onCreate(savedInstanceState);
-        
+   
 		setContentView(R.layout.timer);
 		setTitle(R.string.Rest);
 	
