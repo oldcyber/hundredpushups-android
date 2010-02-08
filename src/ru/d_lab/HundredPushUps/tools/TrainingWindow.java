@@ -72,6 +72,10 @@ public class TrainingWindow extends Dialog {
 			
 			@Override
 			public void onClick(View v) {				
+			//	setOnDismissListener(){
+			//		nextDialog.show();
+			//	}
+				
 				dismiss();
 				// TODO Auto-generated method stub
 			}

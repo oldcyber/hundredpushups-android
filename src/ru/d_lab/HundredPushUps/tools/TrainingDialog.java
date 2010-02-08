@@ -76,7 +76,7 @@ public void onClick(View v){
 		
 		final TextView TimeTimer = (TextView)findViewById(R.id.DialogTrainingTex);
 		setTitle(R.string.Rest);
-       new CountDownTimer(5000, 1000) {
+       new CountDownTimer(1000, 1000) {
 
             public void onTick(long millisUntilFinished) {
             	TimeTimer.setText(" " + millisUntilFinished / 1000+" ");
@@ -90,42 +90,48 @@ public void onClick(View v){
 	}
 
 	public void tTraining(){
-		if (iter<cPlan.length){
-			if (iter == 1){
-	setTitle(R.string.Training1);
-}
-else if (iter == 2){
-	setTitle(R.string.Training2);
-}
-else if (iter == 3){
-	setTitle(R.string.Training3);
-}
-else if (iter == 4){
-	setTitle(R.string.Training4);
-}
-else if (iter == 5){
-	setTitle(R.string.Training5);
-}
-else if (iter == 6){
-	setTitle(R.string.Training6);
-}
-else if (iter == 7){
-	setTitle(R.string.Training7);
-}
-else if (iter == 8){
-	setTitle(R.string.Training8);
-}
-else if (iter == 0){
-	setTitle(R.string.TrainingMax);
-}
-
-TextView Test = (TextView)findViewById(R.id.DialogTrainingTex);
-Test.setText(cPlan[iter]);
-}
-		else {
+		if (iter<cPlan.length)
+		{
+			if (iter == 0){
+				setTitle(R.string.Training1);
+			}
+			else if (iter == 1){
+				setTitle(R.string.Training2);
+			}
+			else if (iter == 2){
+				setTitle(R.string.Training3);
+			}
+			else if (iter == 3){
+				setTitle(R.string.Training4);
+			}
+			else if (iter == 4){
+				setTitle(R.string.Training5);
+			}
+			else if (iter == 5){
+				setTitle(R.string.Training6);
+			}
+			else if (iter == 6){
+				setTitle(R.string.Training7);
+			}
+			else if (iter == 7){
+				setTitle(R.string.Training8);
+			}
+			else if (iter == 8){
+				setTitle(R.string.Training9);
+			}
+			else {
+				//wrong!
+			}
+			TextView Test = (TextView)findViewById(R.id.DialogTrainingTex);
+			Test.setText(cPlan[iter]);
+		}
+		else if (iter == cPlan.length)
+		{
+			setTitle(R.string.TrainingMax);
+		}
+		else 
+		{
 			dismiss();
 		}
 	}
-
-//-----------
 }
