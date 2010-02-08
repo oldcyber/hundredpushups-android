@@ -102,8 +102,8 @@ public final class R {
         public static final int AboutMenuItem=0x7f09003c;
         public static final int BeginTraining=0x7f090031;
         public static final int ButtonArea=0x7f090035;
-        public static final int ButtonCancel=0x7f090037;
-        public static final int ButtonOk=0x7f090036;
+        public static final int ButtonCancel=0x7f090036;
+        public static final int ButtonOk=0x7f090037;
         public static final int ConfigurationButton=0x7f090015;
         public static final int CountPushUps=0x7f09000b;
         public static final int DialogTrainingTex=0x7f090034;

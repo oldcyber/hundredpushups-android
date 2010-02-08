@@ -4,7 +4,8 @@
 <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android" android:weightSum="100" android:id="@+id/TrainingDialog" android:background="#e2e2e2">
 <TableRow android:layout_weight="99" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="1" android:id="@+id/InfoArea"><TextView android:text="@+id/TextView01" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1" android:gravity="center" android:id="@+id/DialogTrainingTex" android:textColor="#ff8c00" android:textStyle="bold" android:textSize="160dp"></TextView>
 </TableRow>
-<TableRow android:weightSum="10" android:layout_weight="1" android:layout_height="fill_parent" android:layout_width="fill_parent" android:id="@+id/ButtonArea"><Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="5" android:layout_gravity="bottom" android:id="@+id/ButtonOk" android:text="@string/dialog_Next"></Button>
-<Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="5" android:layout_gravity="bottom" android:id="@+id/ButtonCancel" android:text="@string/dialog_Cancel"></Button>
+<TableRow android:weightSum="10" android:layout_weight="1" android:layout_height="fill_parent" android:layout_width="fill_parent" android:id="@+id/ButtonArea">
+<Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="bottom" android:id="@+id/ButtonCancel" android:text="@string/dialog_Cancel" android:layout_weight="2"></Button>
+<Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="bottom" android:id="@+id/ButtonOk" android:text="@string/dialog_Next" android:layout_weight="8"></Button>
 </TableRow>
 </RelativeLayout>
