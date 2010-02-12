@@ -74,12 +74,14 @@ public void onClick(View v){
 	
 	public void restTime(){
 		
-		final TextView TimeTimer = (TextView)findViewById(R.id.DialogTrainingTex);
+		TextView TimeTraining = (TextView)findViewById(R.id.DialogTrainingTex);
+		final TextView TimeTimer = (TextView)findViewById(R.id.DialogRestTex);
+		TimeTimer.setVisibility(View.VISIBLE);
+		TimeTraining.setVisibility(View.GONE);
 		setTitle(R.string.Rest);
-       new CountDownTimer(1000, 1000) {
-
+       new CountDownTimer(2000, 1000) {
             public void onTick(long millisUntilFinished) {
-            	TimeTimer.setText(" " + millisUntilFinished / 1000+" ");
+            	TimeTimer.setText("" + millisUntilFinished / 1000 + "");
             }
 
             public void onFinish() {
@@ -90,7 +92,7 @@ public void onClick(View v){
 	}
 
 	public void tTraining(){
-		if (iter<cPlan.length)
+		if (iter < cPlan.length)
 		{
 			if (iter == 0){
 				setTitle(R.string.Training1);
@@ -122,8 +124,11 @@ public void onClick(View v){
 			else {
 				//wrong!
 			}
-			TextView Test = (TextView)findViewById(R.id.DialogTrainingTex);
-			Test.setText(cPlan[iter]);
+			TextView TimeTraining = (TextView)findViewById(R.id.DialogTrainingTex);
+			TextView TimeTimer = (TextView)findViewById(R.id.DialogRestTex);
+			TimeTimer.setVisibility(View.GONE);
+			TimeTraining.setVisibility(View.VISIBLE);
+			TimeTraining.setText(cPlan[iter]);
 		}
 		else if (iter == cPlan.length)
 		{

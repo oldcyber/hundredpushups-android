@@ -64,7 +64,7 @@ if (trainingWeek < 5){
 
 	MakePlan WeekPlan = new MakePlan(trainingLevel, trainingDay, trainingWeek);
 	String[] cPlan = WeekPlan.gettTrainingPlan(this);
-		
+	
 	tv1.setText(cPlan[0]);
 	tv2.setText(cPlan[1]);
 	tv3.setText(cPlan[2]);
