@@ -23,7 +23,7 @@ public class GoTraining extends Activity implements OnClickListener {
 {
 super.onCreate(savedInstanceState);
 setContentView(R.layout.training);
-
+setTitle(R.string.mtitle_Training);
 //Load application preferences
 
 SharedPreferences settings = getSharedPreferences("FileSettings", 0);

@@ -16,6 +16,7 @@ public void onCreate(Bundle savedInstanceState)
 {
 super.onCreate(savedInstanceState);
 setContentView(R.layout.statistics);
+setTitle(R.string.mtitle_Stats);
 
 //Load application preferences
 SharedPreferences settings = getSharedPreferences("FileSettings", 0);

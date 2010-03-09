@@ -25,26 +25,11 @@ public class FirstInitInit extends Activity implements OnClickListener {
         case DIALOG_1:
 	return new AlertDialog.Builder(FirstInitInit.this)
     .setIcon(R.drawable.light)
-    //.setTitle(R.string.WelcomeFirstInit)
     .setMessage(R.string.WelcomeFirstInit1)
     .setPositiveButton(R.string.Ok, new DialogInterface.OnClickListener() {
         public void onClick(DialogInterface dialog, int whichButton) {
-
-            /* User clicked OK so do some stuff */
         }
     })
-//   .setNeutralButton(R.string.dialog_Other, new DialogInterface.OnClickListener() {
-//        public void onClick(DialogInterface dialog, int whichButton) {
-//
-//            /* User clicked Something so do some stuff */
-//        }
-//    })
-//    .setNegativeButton(R.string.dialog_Cancel, new DialogInterface.OnClickListener() {
-//        public void onClick(DialogInterface dialog, int whichButton) {
-//
-//            /* User clicked Cancel so do some stuff */
-//        }
-//    })
     .create();
         case DIALOG_2:
         	return new AlertDialog.Builder(FirstInitInit.this)
@@ -53,8 +38,6 @@ public class FirstInitInit extends Activity implements OnClickListener {
             .setMessage(R.string.ErrorFirstInit1)
             .setPositiveButton(R.string.Ok, new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int whichButton) {
-                	//setContentView(R.layout.firstinitinit);
-                    /* User clicked OK so do some stuff */
                 }
             })		
             .create();
@@ -70,13 +53,8 @@ public void onCreate(Bundle savedInstanceState)
 
 super.onCreate(savedInstanceState);
 setContentView(R.layout.firstinitinit);
-
-//Button twoButtons2Title = (Button) findViewById(R.id.two_buttons2);
-//twoButtons2Title.setOnClickListener(new OnClickListener() {
-//    public void onClick(View v) {
+setTitle(R.string.mtitle_FirstInit);
         showDialog(DIALOG_1);
-//    }
-//});
 
 //Confirm training level
 Button mFirstRunAgree = (Button)findViewById(R.id.FirstRunAgree);

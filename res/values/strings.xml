@@ -12,6 +12,10 @@
     <string name="dialog_Other">Что-то</string>
     <string name="dialog_Save">Сохранить</string>
     <string name="dialog_Next">Далее</string>
+    <string name="mtitle_MainWindow">100 Отжиманий</string>
+    <string name="mtitle_FirstInit">Начальный тест</string>
+    <string name="mtitle_Training">Тренировка</string>
+    <string name="mtitle_Stats">Статистика</string>
     <!-- mainbuttons -->
     <string name="MainButton">Начать тестирование</string>
     <string name="ConfigurationButton">Настройка</string>
@@ -51,7 +55,7 @@
 	<string name="StatsStage">Пройдено:</string>
 	<string name="StatsProgress">Max количество отжиманий:</string>
 	<!-- Go Training -->
-	<string name="BeginTraining">Начать тренировку</string>
+	<string name="BeginTraining">Начать упражнения</string>
 	<string name="TrainingHeader2">Количество</string>
 	<string name="Training1">Подход 1:</string>
 	<string name="Training2">Подход 2:</string>

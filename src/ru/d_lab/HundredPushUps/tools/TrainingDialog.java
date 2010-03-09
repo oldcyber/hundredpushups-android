@@ -11,8 +11,7 @@ import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import ru.d_lab.HundredPushUps.tools.WriteResult;
-
+import ru.d_lab.HundredPushUps.tools.RestTime;
 /**
  * @author Old Cyber
  *
@@ -70,6 +69,8 @@ public class TrainingDialog extends Dialog {
 	}
 //rest window	
 	public void restTime(){
+		RestTime BaiBai = new RestTime(trWeek, trDay);
+		long tRest = BaiBai.getRestTime(this);
 		if (iter < cPlan.length-1){
 		TextView TimeTraining = (TextView)findViewById(R.id.DialogTrainingTex);
 		ok_button.setVisibility(View.INVISIBLE);
@@ -78,7 +79,7 @@ public class TrainingDialog extends Dialog {
 		TimeTimer.setVisibility(View.VISIBLE);
 		TimeTraining.setVisibility(View.GONE);
 		setTitle(R.string.Rest);
-       new CountDownTimer(2000, 1000) {
+       new CountDownTimer(tRest, 1000) {
             public void onTick(long millisUntilFinished) {
             	TimeTimer.setText("" + millisUntilFinished / 1000 + "");
             }
