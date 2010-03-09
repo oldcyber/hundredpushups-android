@@ -22,7 +22,7 @@ public class HundredPushUps extends Activity implements OnClickListener {
     	{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
- 
+        setTitle(R.string.mtitle_MainWindow);
         int mInt=0;
         String LOG_TAG = null;
 		Log.v(LOG_TAG, "mInt value: "+mInt);
